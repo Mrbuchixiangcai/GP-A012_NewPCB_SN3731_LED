@@ -10,31 +10,21 @@
 /*************************/
 /*类型定义byte definition*/
 /*************************/
-PLAY_MODE PlayMode;
-FIRE_SIZE FireMode;
 
 /****************************/
 /*标志位定义flags definetion*/
 /****************************/
-uint8_t   AppTick1ms;
-uint8_t   AppTick0;
-uint8_t   AppTick1;
-uint8_t   AppTick2;
-uint8_t   AppTick3;
-uint8_t   AppTick4;
-uint8_t   AppTick5;
 
 /*****************************/
 /*变量定义variable definition*/
 /*****************************/
-uint8_t  cntAppTick;
-uint8_t  brightness1;
-uint8_t  electricityBrightness;
-uint8_t  demo_NO; //SN3237驱动使用
 
 /**************************/
 /*数组定义array definition*/
 /**************************/
+u8 SN3236_Pwm2_1[36];
+u8 SN3236_Pwm2_2[36];
+u8 SN3236_RegBuffer[0x4B];
 
 /******************************/
 /*函数声明Function declaration*/
@@ -48,6 +38,7 @@ uint8_t  demo_NO; //SN3237驱动使用
 * 输入参数：
 * 输出参数：
 * 函数功能：
+* 返回值说明：
 * 创建日期：
 * 创建人：
 * 修改日期
@@ -56,56 +47,23 @@ uint8_t  demo_NO; //SN3237驱动使用
 * 修改原因：
 * 备注：
 *******************************************************************/
-void PowerON_Reset(void)
+void SN3236_RegWrite(u8 *p)
 {
-	HAL_GPIO_WritePin(GPIOA, GPIO_PIN_15, GPIO_PIN_SET);
-	brightness1 = 2;
-	electricityBrightness = 0x07;
-	FireMode = MODE0_OFF_FIRE;
-	PlayMode = PLAY_ON;
-
-	demo_NO = 1; //SN3237驱动使用
-
-
-	HAL_UART_Receive_IT(&huart1, Uart1_ReceiveBuffer, RECEIVELEN);
-}
-
-/*******************************************************************
-* 函数原型：
-* 输入参数：
-* 输出参数：
-* 函数功能：
-* 创建日期：
-* 创建人：
-* 修改日期
-* 修改人：
-* 第N次修改：
-* 修改原因：
-* 备注：
-*******************************************************************/
-void Scan_ONOFF(void)
-{
-	static uint8_t  BTPower_c;
-	if (BTPower() != BTPower_c)
+	u8 i;
+	IIC_Start();
+	IIC_Send_Byte(0x78);
+	IIC_Wait_Ack();
+	IIC_Send_Byte(0x00);
+	IIC_Wait_Ack();
+	for (i = 0; i<0x4B; i++)
 	{
-		BTPower_c = BTPower();
-		if (BTPower())
-			PlayMode = PLAY_BT;
+		if ((i>0) && (i<0x25))
+			IIC_Send_Byte_Mix(i);
 		else
-		{
-			PlayMode = PLAY_OFF;
-			FireMode = MODE0_OFF_FIRE;
-		}
+			IIC_Send_Byte(p[i]);
+		IIC_Wait_Ack();
 	}
-	if ((!KEY_LIGHT()) || (BTPower()) || (PlayMode != PLAY_OFF))
-	{
-		POWER_LED(1);
-	}
-	if (PlayMode == PLAY_OFF)
-	{
-		FireMode = MODE0_OFF_FIRE;
-		POWER_LED(0);
-	}
+	IIC_Stop();
 }
 
 /*******************************************************************
@@ -113,6 +71,7 @@ void Scan_ONOFF(void)
 * 输入参数：
 * 输出参数：
 * 函数功能：
+* 返回值说明：
 * 创建日期：
 * 创建人：
 * 修改日期
@@ -121,44 +80,74 @@ void Scan_ONOFF(void)
 * 修改原因：
 * 备注：
 *******************************************************************/
-void app_main(void)
+void SN3236_Init1(void)
 {
-	PowerON_Reset();
-
-	while (1)
-	{
-		if (AppTick1ms)
-		{
-			AppTick1ms = 0;
-			ADC_GetBuffer();
-
-			//音量扫描
-			volume_scan(VOLUME_STEP);
-
-			Scan_ONOFF();
-		}
-		if (AppTick0)
-		{
-			AppTick0 = 0;
-			KeyScan();
-			KeyComMsg();
-		}
-		if (AppTick1)
-		{
-			AppTick1 = 0;
-			BlueMode_Handle();
-		}
-		if (AppTick2)
-		{
-			AppTick2 = 0;
-			FireMode_Handle();
-		}
-		if (AppTick3)
-		{
-			AppTick3 = 0;
-			SN3236_Driver();
-		}
-	}
+	u8 i;
+	for (i = 0; i<0x4B; i++)
+		SN3236_RegBuffer[i] = 0;
+	for (i = 0x26; i<0x4A; i++)
+		SN3236_RegBuffer[i] = electricityBrightness;
+	SN3236_RegBuffer[REG_00H_TURN_ON] = 0x01;
 }
+
+/*******************************************************************
+* 函数原型：
+* 输入参数：
+* 输出参数：
+* 函数功能：
+* 返回值说明：
+* 创建日期：
+* 创建人：
+* 修改日期
+* 修改人：
+* 第N次修改：
+* 修改原因：
+* 备注：
+*******************************************************************/
+void SN3236_Driver()
+{
+	SN3236_Init1();
+	SN3236_RegWrite(SN3236_RegBuffer);
+}
+
+/*******************************************************************
+* 函数原型：
+* 输入参数：
+* 输出参数：
+* 函数功能：
+* 返回值说明：
+* 创建日期：
+* 创建人：
+* 修改日期
+* 修改人：
+* 第N次修改：
+* 修改原因：
+* 备注：
+*******************************************************************/
+//u8  xxxx;
+//u8  yyyy;
+//	u8 i;
+//	for(i=0;i<36;i++)
+//		SN3236_Pwm2_1[i]=0x00;
+//	for(i=0;i<36;i++)
+//		SN3236_Pwm2_1[i]=0x00;
+//	SN3236_Pwm2_1[xxxx]=0xF0;
+//	SN3236_Pwm2_2[yyyy]=0xF0;	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

@@ -47,3 +47,6 @@ gp-a012\sn3236.o: ..\App\music_fire.h
 gp-a012\sn3236.o: ..\App\s_small_fire.h
 gp-a012\sn3236.o: ..\App\s_big_fire.h
 gp-a012\sn3236.o: ..\App\s_follow_wind_fire.h 
+gp-a012\sn3236.o: ..\App\SN3731_IO_IIC.h
+gp-a012\sn3236.o: ..\App\SN3731.h
+gp-a012\sn3236.o: ..\App\SN3731_array.h

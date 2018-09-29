@@ -1,10 +1,16 @@
+/**********************************/
+/*头文件定义header file definition*/
+/**********************************/
 #ifndef  __IO_IIC_H__
 #define  __IO_IIC_H__
 
-//头文件header file//
+/*******************/
+/*头文件header file*/
+/*******************/
 
-
-//宏定义macro definition//
+/************************/
+/*宏定义macro definition*/
+/************************/
 typedef unsigned        char uint8_t;
 typedef unsigned short  int  uint16_t;
 typedef unsigned        int  uint32_t;
@@ -76,9 +82,6 @@ typedef unsigned        int  uint32_t;
 					 else     					\
 						GPIOA->BRR=GPIO_PIN_12
 
-					 
-		
-					 
 #define  READ_SDA5    HAL_GPIO_ReadPin(GPIOA,GPIO_PIN_5)
 #define  READ_SDA6    HAL_GPIO_ReadPin(GPIOA,GPIO_PIN_6)
 #define  READ_SDA7	  HAL_GPIO_ReadPin(GPIOA,GPIO_PIN_7)
@@ -87,24 +90,66 @@ typedef unsigned        int  uint32_t;
 #define  READ_SDA10	  HAL_GPIO_ReadPin(GPIOA,GPIO_PIN_10)
 #define  READ_SDA11   HAL_GPIO_ReadPin(GPIOA,GPIO_PIN_11)
 #define  READ_SDA12   HAL_GPIO_ReadPin(GPIOA,GPIO_PIN_12)
-					 
-//类型定义byte definition//
 
+/*************************/
+/*类型定义byte definition*/
+/*************************/
 
-//变量定义variable definition//
+/****************************/
+/*标志位定义flags definetion*/
+/****************************/
 
+/*****************************/
+/*变量定义variable definition*/
+/*****************************/
 
-//标志位定义flags definetion//
+/**************************/
+/*数组定义array definition*/
+/**************************/
 
-
-//函数定义function definetion//
+/******************************/
+/*函数声明Function declaration*/
+/******************************/
 //IIC所有操作函数
-void Delay_1us(u8 t_data);     	   
-void IIC_Start(void);			 	  
-void IIC_Stop(void);				  
-void IIC_Send_Byte(u8 txd);   
+void Delay_1us(u8 t_data);
+void IIC_Start(void);
+void IIC_Stop(void);
+void IIC_Send_Byte(u8 txd);
 void IIC_Send_Byte_Mix(u8 p);
 u8   IIC_Wait_Ack(void);
+
+/*****************************/
+/*函数定义function definetion*/
+/*****************************/
+
+/********************************/
+/*外部调用_宏定义macro definition*/
+/********************************/
+
+/*********************************/
+/*外部调用_类型定义byte definition*/
+/*********************************/
+
+/************************************/
+/*外部调用_标志位定义flags definetion*/
+/************************************/
+
+/*************************************/
+/*外部调用_变量定义variable definition*/
+/*************************************/
+
+/**********************************/
+/*外部调用_数组定义array definition*/
+/**********************************/
+
+/**************************************/
+/*外部调用_函数声明Function declaration*/
+/**************************************/
+
+/*************************************/
+/*外部调用_函数定义function definetion*/
+/*************************************/
+
 #endif
 
 

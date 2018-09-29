@@ -39,7 +39,7 @@ gp-a012\music_fire.o: D:\ProgramFiles\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 gp-a012\music_fire.o: ..\App\bt_mode.h
 gp-a012\music_fire.o: ..\App\rgb.h
 gp-a012\music_fire.o: ..\App\IO_IIC.h
-gp-a012\music_fire.o: ..\App\SN3731.h
+gp-a012\music_fire.o: ..\App\SN3236.h
 gp-a012\music_fire.o: ..\App\Key.h
 gp-a012\music_fire.o: ..\App\big_fire.h
 gp-a012\music_fire.o: ..\App\small_fire.h
@@ -47,3 +47,6 @@ gp-a012\music_fire.o: ..\App\music_fire.h
 gp-a012\music_fire.o: ..\App\s_small_fire.h
 gp-a012\music_fire.o: ..\App\s_big_fire.h
 gp-a012\music_fire.o: ..\App\s_follow_wind_fire.h 
+gp-a012\music_fire.o: ..\App\SN3731_IO_IIC.h
+gp-a012\music_fire.o: ..\App\SN3731.h
+gp-a012\music_fire.o: ..\App\SN3731_array.h

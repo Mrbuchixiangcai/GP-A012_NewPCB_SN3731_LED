@@ -40,7 +40,7 @@ gp-a012\stm32f0xx_it.o: D:\ProgramFiles\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.
 gp-a012\stm32f0xx_it.o: ..\App\bt_mode.h
 gp-a012\stm32f0xx_it.o: ..\App\rgb.h
 gp-a012\stm32f0xx_it.o: ..\App\IO_IIC.h
-gp-a012\stm32f0xx_it.o: ..\App\SN3731.h
+gp-a012\stm32f0xx_it.o: ..\App\SN3236.h
 gp-a012\stm32f0xx_it.o: ..\App\Key.h
 gp-a012\stm32f0xx_it.o: ..\App\big_fire.h
 gp-a012\stm32f0xx_it.o: ..\App\small_fire.h
@@ -48,3 +48,6 @@ gp-a012\stm32f0xx_it.o: ..\App\music_fire.h
 gp-a012\stm32f0xx_it.o: ..\App\s_small_fire.h
 gp-a012\stm32f0xx_it.o: ..\App\s_big_fire.h
 gp-a012\stm32f0xx_it.o: ..\App\s_follow_wind_fire.h 
+gp-a012\stm32f0xx_it.o: ..\App\SN3731_IO_IIC.h
+gp-a012\stm32f0xx_it.o: ..\App\SN3731.h
+gp-a012\stm32f0xx_it.o: ..\App\SN3731_array.h

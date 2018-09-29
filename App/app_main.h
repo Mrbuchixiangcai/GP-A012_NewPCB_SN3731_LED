@@ -10,7 +10,7 @@
 #include "bt_mode.h"
 #include "rgb.h"
 #include "IO_IIC.h"
-#include "SN3731.h"// 
+#include "SN3236.h"// 
 #include "Key.h"
 #include "big_fire.h"
 #include "small_fire.h"
@@ -18,6 +18,10 @@
 #include "s_small_fire.h"
 #include "s_big_fire.h"
 #include "s_follow_wind_fire.h "
+#include "SN3731_IO_IIC.h"
+#include "SN3731.h"// 
+#include "SN3731_array.h"
+
 typedef unsigned         char uint8_t;
 typedef unsigned short   int  uint16_t;
 typedef unsigned         int  uint32_t;

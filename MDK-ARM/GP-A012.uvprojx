@@ -311,7 +311,7 @@
           </ArmAdsMisc>
           <Cads>
             <interw>1</interw>
-            <Optim>4</Optim>
+            <Optim>2</Optim>
             <oTime>0</oTime>
             <SplitLS>0</SplitLS>
             <OneElfS>1</OneElfS>
@@ -546,9 +546,19 @@
               <FilePath>..\App\s_small_fire.c</FilePath>
             </File>
             <File>
+              <FileName>SN3236.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\App\SN3236.c</FilePath>
+            </File>
+            <File>
               <FileName>SN3731.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\App\SN3731.c</FilePath>
+            </File>
+            <File>
+              <FileName>SN3731_IO_IIC.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\App\SN3731_IO_IIC.c</FilePath>
             </File>
           </Files>
         </Group>

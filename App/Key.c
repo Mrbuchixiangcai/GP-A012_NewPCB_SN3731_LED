@@ -112,8 +112,8 @@ void KeyComMsg(void)
 	static uint16_t  cntUart_Send=0;
 	if(gbKeyPress)
 	{
-		if(PlayMode==PLAY_OFF)
-			PlayMode=PLAY_ON;
+//		if(PlayMode==PLAY_OFF)
+//			PlayMode=PLAY_ON;
 		switch(KeyValue)
 		{
 //			case KU(T_BT_POWER):
@@ -132,17 +132,16 @@ void KeyComMsg(void)
 					FireMode++;
 					if(FireMode>FIRE_SIZE_MAX)
 						FireMode=MODE0_OFF_FIRE;
-					if(FireMode == MODE0_OFF_FIRE)
-					{
-						if(BTPower())
-							PlayMode=PLAY_BT;
-						else
-							PlayMode=PLAY_OFF;
-					}
+//					if(FireMode == MODE0_OFF_FIRE)
+//					{
+//						if(BTPower())
+//							PlayMode=PLAY_BT;
+//						else
+//							PlayMode=PLAY_OFF;
+//					}
 				}
 				else if(PlayMode==PLAY_ON)//蓝牙关机情况打开lihgt，只有小火和关闭两种情况
 				{
-					//PlayMode=PLAY_ON;
 					if(FireMode==MODE0_OFF_FIRE)
 					{	
 						FireMode=MODE1_SMALL_FIRE1;

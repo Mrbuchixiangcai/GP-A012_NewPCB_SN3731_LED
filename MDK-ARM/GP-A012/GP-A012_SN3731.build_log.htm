@@ -22,51 +22,82 @@ Dialog DLL:      TARMCM1.DLL V1.14.0.0
  
 <h2>Project:</h2>
 F:\homework\keil5\Project\Project.company\4、GP-A012\GP-A012_NewPCB_SN3731_LED\MDK-ARM\GP-A012.uvprojx
-Project File Date:  09/27/2018
+Project File Date:  09/28/2018
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 6 (build 750)', folder: 'D:\ProgramFiles\Keil_v5\ARM\ARMCC\Bin'
-Rebuild target 'GP-A012_NEWPCB_SN3731'
-assembling startup_stm32f030x6.s...
-compiling stm32f0xx_hal_dma.c...
-compiling stm32f0xx_hal_adc.c...
-compiling stm32f0xx_hal_uart.c...
-compiling stm32f0xx_hal_tim_ex.c...
-compiling stm32f0xx_hal_uart_ex.c...
-compiling stm32f0xx_hal_i2c.c...
-compiling stm32f0xx_hal_rcc.c...
-compiling stm32f0xx_hal_i2c_ex.c...
-compiling stm32f0xx_hal_flash.c...
-compiling stm32f0xx_hal_tim.c...
-compiling stm32f0xx_hal.c...
-compiling stm32f0xx_hal_pwr.c...
-compiling stm32f0xx_hal_flash_ex.c...
-compiling stm32f0xx_hal_rcc_ex.c...
-compiling stm32f0xx_hal_cortex.c...
-compiling stm32f0xx_hal_adc_ex.c...
-compiling stm32f0xx_hal_pwr_ex.c...
-compiling app_main.c...
-compiling stm32f0xx_hal_gpio.c...
-compiling bt_mode.c...
-compiling h_adc.c...
-compiling IO_IIC.c...
-compiling big_fire.c...
-compiling Key.c...
-compiling rgb.c...
-compiling s_big_fire.c...
-compiling music_fire.c...
-compiling small_fire.c...
-compiling s_follow_wind_fire.c...
+Build target 'GP-A012_NEWPCB_SN3731'
 compiling SN3731.c...
-compiling s_small_fire.c...
-compiling stm32f0xx_it.c...
-compiling stm32f0xx_hal_msp.c...
-compiling main.c...
-compiling system_stm32f0xx.c...
-linking...
-Program Size: Code=10624 RO-data=17944 RW-data=104 ZI-data=2104  
-FromELF: creating hex file...
-"GP-A012\GP-A012_SN3731.axf" - 0 Error(s), 0 Warning(s).
+..\App\SN3731.c(121): error:  #167: argument of type "const unsigned char (*)[18]" is incompatible with parameter of type "unsigned char *"
+  	SN3731_IIC_WriteRegs(0x00, &all_led_on, 18);
+..\App\SN3731.c(122): error:  #167: argument of type "const unsigned char (*)[144]" is incompatible with parameter of type "unsigned char *"
+  	SN3731_IIC_WriteRegs(0x24, &all_pwm_on, 144);
+..\App\SN3731.c(141): error:  #167: argument of type "const unsigned char *" is incompatible with parameter of type "unsigned char *"
+  	SN3731_IIC_WriteRegs(0x00, all_led_off, 18);
+..\App\SN3731.c(142): error:  #167: argument of type "const unsigned char *" is incompatible with parameter of type "unsigned char *"
+  	SN3731_IIC_WriteRegs(0x24, all_pwm_off, 144);
+..\App\SN3731.c(161): error:  #167: argument of type "const unsigned char *" is incompatible with parameter of type "unsigned char *"
+  	SN3731_IIC_WriteRegs(0x12, all_blink_on, 18);
+..\App\SN3731.c(162): error:  #167: argument of type "const unsigned char *" is incompatible with parameter of type "unsigned char *"
+  	SN3731_IIC_WriteRegs(0x00, all_led_on, 18);
+..\App\SN3731.c(163): error:  #167: argument of type "const unsigned char *" is incompatible with parameter of type "unsigned char *"
+  	SN3731_IIC_WriteRegs(0x24, all_pwm_on, 144);
+..\App\SN3731.c(182): error:  #167: argument of type "const unsigned char *" is incompatible with parameter of type "unsigned char *"
+  	SN3731_IIC_WriteRegs(0x12, all_blink_off, 18);
+..\App\SN3731.c(183): error:  #167: argument of type "const unsigned char *" is incompatible with parameter of type "unsigned char *"
+  	SN3731_IIC_WriteRegs(0x00, all_led_off, 18);
+..\App\SN3731.c(184): error:  #167: argument of type "const unsigned char *" is incompatible with parameter of type "unsigned char *"
+  	SN3731_IIC_WriteRegs(0x24, all_pwm_off, 144);
+..\App\SN3731.c(203): error:  #167: argument of type "const unsigned char *" is incompatible with parameter of type "unsigned char *"
+  	SN3731_IIC_WriteRegs(0x24, all_pwm_off, 144);
+..\App\SN3731.c(222): error:  #167: argument of type "const unsigned char *" is incompatible with parameter of type "unsigned char *"
+  	SN3731_IIC_WriteRegs(0x00, all_led_off, 18);
+..\App\SN3731.c(241): error:  #167: argument of type "const unsigned char *" is incompatible with parameter of type "unsigned char *"
+  	SN3731_IIC_WriteRegs(0x12, all_blink_off, 18);
+..\App\SN3731.c(848): warning:  #177-D: variable "temp"  was declared but never referenced
+  	long unsigned int i, j, temp;
+..\App\SN3731.c(977): error:  #167: argument of type "unsigned char" is incompatible with parameter of type "unsigned char *"
+  		SN3731_IIC_WriteRegs(0x00,*all_led_off,18);
+..\App\SN3731.c(978): error:  #167: argument of type "unsigned char" is incompatible with parameter of type "unsigned char *"
+  		SN3731_IIC_WriteRegs(0x12,*all_blink_off,18);
+..\App\SN3731.c(979): error:  #167: argument of type "unsigned char" is incompatible with parameter of type "unsigned char *"
+  		SN3731_IIC_WriteRegs(0x24,*all_pwm_off,144);
+..\App\SN3731.c(1022): error:  #167: argument of type "const unsigned char *" is incompatible with parameter of type "unsigned char *"
+  					SN3731_WriteRegs(0x00, all_led_off, 18);	   				//因为SN3731在播放结束时，图片是停在最后一帧的下一帧
+..\App\SN3731.c(1023): error:  #167: argument of type "const unsigned char *" is incompatible with parameter of type "unsigned char *"
+  					SN3731_WriteRegs(0x24, all_pwm_off, 144);					//而如果不清零的话，很可能在movie的末尾与下一动画衔接时会闪烁一下。
+..\App\SN3731.c(1031): error:  #167: argument of type "const unsigned char *" is incompatible with parameter of type "unsigned char *"
+  					SN3731_WriteRegs(0x00, all_led_off, 18);	   				//如果尾数不为零，且当前动画的总帧数为4的偶数倍则为数帧清零
+..\App\SN3731.c(1032): error:  #167: argument of type "const unsigned char *" is incompatible with parameter of type "unsigned char *"
+  					SN3731_WriteRegs(0x24, all_pwm_off, 144);
+..\App\SN3731.c(1044): error:  #167: argument of type "const unsigned char *" is incompatible with parameter of type "unsigned char *"
+  					SN3731_WriteRegs(0x00, all_led_off, 18);
+..\App\SN3731.c(1045): error:  #167: argument of type "const unsigned char *" is incompatible with parameter of type "unsigned char *"
+  					SN3731_WriteRegs(0x24, all_pwm_off, 144);
+..\App\SN3731.c(1054): error:  #167: argument of type "const unsigned char *" is incompatible with parameter of type "unsigned char *"
+  					SN3731_WriteRegs(0x00, all_led_off, 18);					//因为SN3731在播放结束时，图片是停在最后一帧的下一帧
+..\App\SN3731.c(1055): error:  #167: argument of type "const unsigned char *" is incompatible with parameter of type "unsigned char *"
+  					SN3731_WriteRegs(0x24, all_pwm_off, 144);					//而如果不清零的话，很可能在movie的末尾与下一动画衔接时会闪烁一下。
+..\App\SN3731.c(1073): warning:  #223-D: function "SN3731_Init2" declared implicitly
+  			SN3731_Init2();				//完全初始化芯片
+..\App\SN3731.c(1079): warning:  #223-D: function "load_data_pwm" declared implicitly
+  				load_data_pwm(Movie_Name);				 //装载烟花动画，由传进来的参数决定，参数由宏定义确定				
+..\App\SN3731.c(1101): error:  #20: identifier "front_4_flag" is undefined
+  		if (front_4_flag)	//1为播放前4帧标志，0为播放后4帧标志	   //中断内部改变front_4_flag的值
+..\App\SN3731.c(1108): warning:  #223-D: function "load_data_pwm" declared implicitly
+  				load_data_pwm(Movie_Name);				 //装载烟花动画，参数由宏定义确定
+..\App\SN3731.c(1129): warning:  #223-D: function "load_data_pwm" declared implicitly
+  				load_data_pwm(Movie_Name);				 //装载烟花动画，					 
+..\App\SN3731.c(1235): warning:  #111-D: statement is unreachable
+  			break;
+..\App\SN3731.c(68): warning:  #550-D: variable "g_SN3731_IIC_ADDRESS"  was set but never used
+  static unsigned char g_SN3731_IIC_ADDRESS = SN3731_IIC_ADDRESS_M;
+..\App\SN3731.c(18): warning:  #177-D: variable "pwm_temp1"  was declared but never referenced
+  	static unsigned char pwm_temp1[32];
+..\App\SN3731.c(19): warning:  #177-D: variable "pwm_temp2"  was declared but never referenced
+  	static unsigned char pwm_temp2[32];
+..\App\SN3731.c: 9 warnings, 25 errors
+"GP-A012\GP-A012_SN3731.axf" - 25 Error(s), 9 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -89,7 +120,8 @@ Package Vendor: Keil
 <h2>Collection of Component Files used:</h2>
 
    * Component: ARM::CMSIS:CORE:5.1.2
-Build Time Elapsed:  00:00:20
+Target not created.
+Build Time Elapsed:  00:00:02
 </pre>
 </body>
 </html>
