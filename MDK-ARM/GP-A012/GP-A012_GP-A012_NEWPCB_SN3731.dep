@@ -558,7 +558,7 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_pwr.h)(0x5B42D136)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_pwr_ex.h)(0x5B42D136)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart.h)(0x5B42D136)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart_ex.h)(0x5B42D136)
-F (..\App\app_main.c)(0x5BAC8127)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\App-I.\RTE\_GP-A012_NEWPCB_SN3731-ID:\ProgramFiles\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-ID:\ProgramFiles\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-ID:\ProgramFiles\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Device\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x6 -DUSE_HAL_DRIVER -DSTM32F030x6-o gp-a012\app_main.o --omf_browse gp-a012\app_main.crf --depend gp-a012\app_main.d)
+F (..\App\app_main.c)(0x5BBC1AAB)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\App-I.\RTE\_GP-A012_NEWPCB_SN3731-ID:\ProgramFiles\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-ID:\ProgramFiles\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-ID:\ProgramFiles\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Device\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x6 -DUSE_HAL_DRIVER -DSTM32F030x6-o gp-a012\app_main.o --omf_browse gp-a012\app_main.crf --depend gp-a012\app_main.d)
 I (..\App\app_main.h)(0x5BAD9B62)
 I (../Inc/main.h)(0x5B8FC75E)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h)(0x5B42D136)
@@ -605,9 +605,9 @@ I (..\App\music_fire.h )(0x5B99C873)
 I (..\App\s_small_fire.h)(0x5B9A3691)
 I (..\App\s_big_fire.h)(0x5B9A36B2)
 I (..\App\s_follow_wind_fire.h )(0x5B9A20E8)
-I (..\App\SN3731_IO_IIC.h)(0x5BADD904)
-I (..\App\SN3731.h)(0x5BADD9AC)
-I (..\App\SN3731_array.h)(0x5BADD8AB)
+I (..\App\SN3731_IO_IIC.h)(0x5BBC4885)
+I (..\App\SN3731.h)(0x5BB85ABE)
+I (..\App\SN3731_array.h)(0x5BB86929)
 F (..\App\bt_mode.c)(0x5BAC4FAB)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\App-I.\RTE\_GP-A012_NEWPCB_SN3731-ID:\ProgramFiles\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-ID:\ProgramFiles\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-ID:\ProgramFiles\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Device\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x6 -DUSE_HAL_DRIVER -DSTM32F030x6-o gp-a012\bt_mode.o --omf_browse gp-a012\bt_mode.crf --depend gp-a012\bt_mode.d)
 I (..\App\app_main.h)(0x5BAD9B62)
 I (../Inc/main.h)(0x5B8FC75E)
@@ -655,9 +655,9 @@ I (..\App\music_fire.h )(0x5B99C873)
 I (..\App\s_small_fire.h)(0x5B9A3691)
 I (..\App\s_big_fire.h)(0x5B9A36B2)
 I (..\App\s_follow_wind_fire.h )(0x5B9A20E8)
-I (..\App\SN3731_IO_IIC.h)(0x5BADD904)
-I (..\App\SN3731.h)(0x5BADD9AC)
-I (..\App\SN3731_array.h)(0x5BADD8AB)
+I (..\App\SN3731_IO_IIC.h)(0x5BBC4885)
+I (..\App\SN3731.h)(0x5BB85ABE)
+I (..\App\SN3731_array.h)(0x5BB86929)
 F (..\App\h_adc.c)(0x5B99C9A5)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\App-I.\RTE\_GP-A012_NEWPCB_SN3731-ID:\ProgramFiles\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-ID:\ProgramFiles\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-ID:\ProgramFiles\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Device\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x6 -DUSE_HAL_DRIVER -DSTM32F030x6-o gp-a012\h_adc.o --omf_browse gp-a012\h_adc.crf --depend gp-a012\h_adc.d)
 I (..\App\app_main.h)(0x5BAD9B62)
 I (../Inc/main.h)(0x5B8FC75E)
@@ -705,10 +705,10 @@ I (..\App\music_fire.h )(0x5B99C873)
 I (..\App\s_small_fire.h)(0x5B9A3691)
 I (..\App\s_big_fire.h)(0x5B9A36B2)
 I (..\App\s_follow_wind_fire.h )(0x5B9A20E8)
-I (..\App\SN3731_IO_IIC.h)(0x5BADD904)
-I (..\App\SN3731.h)(0x5BADD9AC)
-I (..\App\SN3731_array.h)(0x5BADD8AB)
-F (..\App\IO_IIC.c)(0x5BAC901D)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\App-I.\RTE\_GP-A012_NEWPCB_SN3731-ID:\ProgramFiles\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-ID:\ProgramFiles\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-ID:\ProgramFiles\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Device\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x6 -DUSE_HAL_DRIVER -DSTM32F030x6-o gp-a012\io_iic.o --omf_browse gp-a012\io_iic.crf --depend gp-a012\io_iic.d)
+I (..\App\SN3731_IO_IIC.h)(0x5BBC4885)
+I (..\App\SN3731.h)(0x5BB85ABE)
+I (..\App\SN3731_array.h)(0x5BB86929)
+F (..\App\IO_IIC.c)(0x5BBB1FBC)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\App-I.\RTE\_GP-A012_NEWPCB_SN3731-ID:\ProgramFiles\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-ID:\ProgramFiles\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-ID:\ProgramFiles\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Device\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x6 -DUSE_HAL_DRIVER -DSTM32F030x6-o gp-a012\io_iic.o --omf_browse gp-a012\io_iic.crf --depend gp-a012\io_iic.d)
 I (..\App\app_main.h)(0x5BAD9B62)
 I (../Inc/main.h)(0x5B8FC75E)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h)(0x5B42D136)
@@ -755,9 +755,9 @@ I (..\App\music_fire.h )(0x5B99C873)
 I (..\App\s_small_fire.h)(0x5B9A3691)
 I (..\App\s_big_fire.h)(0x5B9A36B2)
 I (..\App\s_follow_wind_fire.h )(0x5B9A20E8)
-I (..\App\SN3731_IO_IIC.h)(0x5BADD904)
-I (..\App\SN3731.h)(0x5BADD9AC)
-I (..\App\SN3731_array.h)(0x5BADD8AB)
+I (..\App\SN3731_IO_IIC.h)(0x5BBC4885)
+I (..\App\SN3731.h)(0x5BB85ABE)
+I (..\App\SN3731_array.h)(0x5BB86929)
 F (..\App\Key.c)(0x5BAC58E6)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\App-I.\RTE\_GP-A012_NEWPCB_SN3731-ID:\ProgramFiles\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-ID:\ProgramFiles\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-ID:\ProgramFiles\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Device\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x6 -DUSE_HAL_DRIVER -DSTM32F030x6-o gp-a012\key.o --omf_browse gp-a012\key.crf --depend gp-a012\key.d)
 I (..\App\app_main.h)(0x5BAD9B62)
 I (../Inc/main.h)(0x5B8FC75E)
@@ -805,9 +805,9 @@ I (..\App\music_fire.h )(0x5B99C873)
 I (..\App\s_small_fire.h)(0x5B9A3691)
 I (..\App\s_big_fire.h)(0x5B9A36B2)
 I (..\App\s_follow_wind_fire.h )(0x5B9A20E8)
-I (..\App\SN3731_IO_IIC.h)(0x5BADD904)
-I (..\App\SN3731.h)(0x5BADD9AC)
-I (..\App\SN3731_array.h)(0x5BADD8AB)
+I (..\App\SN3731_IO_IIC.h)(0x5BBC4885)
+I (..\App\SN3731.h)(0x5BB85ABE)
+I (..\App\SN3731_array.h)(0x5BB86929)
 F (..\App\rgb.c)(0x5B9B4B7B)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\App-I.\RTE\_GP-A012_NEWPCB_SN3731-ID:\ProgramFiles\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-ID:\ProgramFiles\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-ID:\ProgramFiles\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Device\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x6 -DUSE_HAL_DRIVER -DSTM32F030x6-o gp-a012\rgb.o --omf_browse gp-a012\rgb.crf --depend gp-a012\rgb.d)
 I (..\App\app_main.h)(0x5BAD9B62)
 I (../Inc/main.h)(0x5B8FC75E)
@@ -855,9 +855,9 @@ I (..\App\music_fire.h )(0x5B99C873)
 I (..\App\s_small_fire.h)(0x5B9A3691)
 I (..\App\s_big_fire.h)(0x5B9A36B2)
 I (..\App\s_follow_wind_fire.h )(0x5B9A20E8)
-I (..\App\SN3731_IO_IIC.h)(0x5BADD904)
-I (..\App\SN3731.h)(0x5BADD9AC)
-I (..\App\SN3731_array.h)(0x5BADD8AB)
+I (..\App\SN3731_IO_IIC.h)(0x5BBC4885)
+I (..\App\SN3731.h)(0x5BB85ABE)
+I (..\App\SN3731_array.h)(0x5BB86929)
 F (..\App\big_fire.c)(0x5B9B279D)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\App-I.\RTE\_GP-A012_NEWPCB_SN3731-ID:\ProgramFiles\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-ID:\ProgramFiles\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-ID:\ProgramFiles\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Device\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x6 -DUSE_HAL_DRIVER -DSTM32F030x6-o gp-a012\big_fire.o --omf_browse gp-a012\big_fire.crf --depend gp-a012\big_fire.d)
 I (..\App\app_main.h)(0x5BAD9B62)
 I (../Inc/main.h)(0x5B8FC75E)
@@ -905,9 +905,9 @@ I (..\App\music_fire.h )(0x5B99C873)
 I (..\App\s_small_fire.h)(0x5B9A3691)
 I (..\App\s_big_fire.h)(0x5B9A36B2)
 I (..\App\s_follow_wind_fire.h )(0x5B9A20E8)
-I (..\App\SN3731_IO_IIC.h)(0x5BADD904)
-I (..\App\SN3731.h)(0x5BADD9AC)
-I (..\App\SN3731_array.h)(0x5BADD8AB)
+I (..\App\SN3731_IO_IIC.h)(0x5BBC4885)
+I (..\App\SN3731.h)(0x5BB85ABE)
+I (..\App\SN3731_array.h)(0x5BB86929)
 F (..\App\small_fire.c)(0x5B9B250F)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\App-I.\RTE\_GP-A012_NEWPCB_SN3731-ID:\ProgramFiles\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-ID:\ProgramFiles\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-ID:\ProgramFiles\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Device\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x6 -DUSE_HAL_DRIVER -DSTM32F030x6-o gp-a012\small_fire.o --omf_browse gp-a012\small_fire.crf --depend gp-a012\small_fire.d)
 I (..\App\app_main.h)(0x5BAD9B62)
 I (../Inc/main.h)(0x5B8FC75E)
@@ -955,9 +955,9 @@ I (..\App\music_fire.h )(0x5B99C873)
 I (..\App\s_small_fire.h)(0x5B9A3691)
 I (..\App\s_big_fire.h)(0x5B9A36B2)
 I (..\App\s_follow_wind_fire.h )(0x5B9A20E8)
-I (..\App\SN3731_IO_IIC.h)(0x5BADD904)
-I (..\App\SN3731.h)(0x5BADD9AC)
-I (..\App\SN3731_array.h)(0x5BADD8AB)
+I (..\App\SN3731_IO_IIC.h)(0x5BBC4885)
+I (..\App\SN3731.h)(0x5BB85ABE)
+I (..\App\SN3731_array.h)(0x5BB86929)
 F (..\App\music_fire.c)(0x5B9B222D)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\App-I.\RTE\_GP-A012_NEWPCB_SN3731-ID:\ProgramFiles\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-ID:\ProgramFiles\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-ID:\ProgramFiles\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Device\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x6 -DUSE_HAL_DRIVER -DSTM32F030x6-o gp-a012\music_fire.o --omf_browse gp-a012\music_fire.crf --depend gp-a012\music_fire.d)
 I (..\App\app_main.h)(0x5BAD9B62)
 I (../Inc/main.h)(0x5B8FC75E)
@@ -1005,10 +1005,10 @@ I (..\App\music_fire.h )(0x5B99C873)
 I (..\App\s_small_fire.h)(0x5B9A3691)
 I (..\App\s_big_fire.h)(0x5B9A36B2)
 I (..\App\s_follow_wind_fire.h )(0x5B9A20E8)
-I (..\App\SN3731_IO_IIC.h)(0x5BADD904)
-I (..\App\SN3731.h)(0x5BADD9AC)
-I (..\App\SN3731_array.h)(0x5BADD8AB)
-F (..\App\s_big_fire.c)(0x5B9A20E8)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\App-I.\RTE\_GP-A012_NEWPCB_SN3731-ID:\ProgramFiles\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-ID:\ProgramFiles\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-ID:\ProgramFiles\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Device\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x6 -DUSE_HAL_DRIVER -DSTM32F030x6-o gp-a012\s_big_fire.o --omf_browse gp-a012\s_big_fire.crf --depend gp-a012\s_big_fire.d)
+I (..\App\SN3731_IO_IIC.h)(0x5BBC4885)
+I (..\App\SN3731.h)(0x5BB85ABE)
+I (..\App\SN3731_array.h)(0x5BB86929)
+F (..\App\s_big_fire.c)(0x5BB837AD)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\App-I.\RTE\_GP-A012_NEWPCB_SN3731-ID:\ProgramFiles\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-ID:\ProgramFiles\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-ID:\ProgramFiles\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Device\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x6 -DUSE_HAL_DRIVER -DSTM32F030x6-o gp-a012\s_big_fire.o --omf_browse gp-a012\s_big_fire.crf --depend gp-a012\s_big_fire.d)
 I (..\App\app_main.h)(0x5BAD9B62)
 I (../Inc/main.h)(0x5B8FC75E)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h)(0x5B42D136)
@@ -1055,9 +1055,9 @@ I (..\App\music_fire.h )(0x5B99C873)
 I (..\App\s_small_fire.h)(0x5B9A3691)
 I (..\App\s_big_fire.h)(0x5B9A36B2)
 I (..\App\s_follow_wind_fire.h )(0x5B9A20E8)
-I (..\App\SN3731_IO_IIC.h)(0x5BADD904)
-I (..\App\SN3731.h)(0x5BADD9AC)
-I (..\App\SN3731_array.h)(0x5BADD8AB)
+I (..\App\SN3731_IO_IIC.h)(0x5BBC4885)
+I (..\App\SN3731.h)(0x5BB85ABE)
+I (..\App\SN3731_array.h)(0x5BB86929)
 F (..\App\s_follow_wind_fire.c)(0x5B9A20E8)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\App-I.\RTE\_GP-A012_NEWPCB_SN3731-ID:\ProgramFiles\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-ID:\ProgramFiles\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-ID:\ProgramFiles\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Device\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x6 -DUSE_HAL_DRIVER -DSTM32F030x6-o gp-a012\s_follow_wind_fire.o --omf_browse gp-a012\s_follow_wind_fire.crf --depend gp-a012\s_follow_wind_fire.d)
 I (..\App\app_main.h)(0x5BAD9B62)
 I (../Inc/main.h)(0x5B8FC75E)
@@ -1105,9 +1105,9 @@ I (..\App\music_fire.h )(0x5B99C873)
 I (..\App\s_small_fire.h)(0x5B9A3691)
 I (..\App\s_big_fire.h)(0x5B9A36B2)
 I (..\App\s_follow_wind_fire.h )(0x5B9A20E8)
-I (..\App\SN3731_IO_IIC.h)(0x5BADD904)
-I (..\App\SN3731.h)(0x5BADD9AC)
-I (..\App\SN3731_array.h)(0x5BADD8AB)
+I (..\App\SN3731_IO_IIC.h)(0x5BBC4885)
+I (..\App\SN3731.h)(0x5BB85ABE)
+I (..\App\SN3731_array.h)(0x5BB86929)
 F (..\App\s_small_fire.c)(0x5B9A3691)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\App-I.\RTE\_GP-A012_NEWPCB_SN3731-ID:\ProgramFiles\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-ID:\ProgramFiles\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-ID:\ProgramFiles\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Device\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x6 -DUSE_HAL_DRIVER -DSTM32F030x6-o gp-a012\s_small_fire.o --omf_browse gp-a012\s_small_fire.crf --depend gp-a012\s_small_fire.d)
 I (..\App\app_main.h)(0x5BAD9B62)
 I (../Inc/main.h)(0x5B8FC75E)
@@ -1155,9 +1155,9 @@ I (..\App\music_fire.h )(0x5B99C873)
 I (..\App\s_small_fire.h)(0x5B9A3691)
 I (..\App\s_big_fire.h)(0x5B9A36B2)
 I (..\App\s_follow_wind_fire.h )(0x5B9A20E8)
-I (..\App\SN3731_IO_IIC.h)(0x5BADD904)
-I (..\App\SN3731.h)(0x5BADD9AC)
-I (..\App\SN3731_array.h)(0x5BADD8AB)
+I (..\App\SN3731_IO_IIC.h)(0x5BBC4885)
+I (..\App\SN3731.h)(0x5BB85ABE)
+I (..\App\SN3731_array.h)(0x5BB86929)
 F (..\App\SN3236.c)(0x5BAC9133)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\App-I.\RTE\_GP-A012_NEWPCB_SN3731-ID:\ProgramFiles\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-ID:\ProgramFiles\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-ID:\ProgramFiles\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Device\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x6 -DUSE_HAL_DRIVER -DSTM32F030x6-o gp-a012\sn3236.o --omf_browse gp-a012\sn3236.crf --depend gp-a012\sn3236.d)
 I (..\App\app_main.h)(0x5BAD9B62)
 I (../Inc/main.h)(0x5B8FC75E)
@@ -1205,10 +1205,10 @@ I (..\App\music_fire.h )(0x5B99C873)
 I (..\App\s_small_fire.h)(0x5B9A3691)
 I (..\App\s_big_fire.h)(0x5B9A36B2)
 I (..\App\s_follow_wind_fire.h )(0x5B9A20E8)
-I (..\App\SN3731_IO_IIC.h)(0x5BADD904)
-I (..\App\SN3731.h)(0x5BADD9AC)
-I (..\App\SN3731_array.h)(0x5BADD8AB)
-F (..\App\SN3731.c)(0x5BADDC11)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\App-I.\RTE\_GP-A012_NEWPCB_SN3731-ID:\ProgramFiles\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-ID:\ProgramFiles\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-ID:\ProgramFiles\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Device\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x6 -DUSE_HAL_DRIVER -DSTM32F030x6-o gp-a012\sn3731.o --omf_browse gp-a012\sn3731.crf --depend gp-a012\sn3731.d)
+I (..\App\SN3731_IO_IIC.h)(0x5BBC4885)
+I (..\App\SN3731.h)(0x5BB85ABE)
+I (..\App\SN3731_array.h)(0x5BB86929)
+F (..\App\SN3731.c)(0x5BBC028A)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\App-I.\RTE\_GP-A012_NEWPCB_SN3731-ID:\ProgramFiles\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-ID:\ProgramFiles\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-ID:\ProgramFiles\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Device\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x6 -DUSE_HAL_DRIVER -DSTM32F030x6-o gp-a012\sn3731.o --omf_browse gp-a012\sn3731.crf --depend gp-a012\sn3731.d)
 I (..\App\app_main.h)(0x5BAD9B62)
 I (../Inc/main.h)(0x5B8FC75E)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h)(0x5B42D136)
@@ -1255,10 +1255,10 @@ I (..\App\music_fire.h )(0x5B99C873)
 I (..\App\s_small_fire.h)(0x5B9A3691)
 I (..\App\s_big_fire.h)(0x5B9A36B2)
 I (..\App\s_follow_wind_fire.h )(0x5B9A20E8)
-I (..\App\SN3731_IO_IIC.h)(0x5BADD904)
-I (..\App\SN3731.h)(0x5BADD9AC)
-I (..\App\SN3731_array.h)(0x5BADD8AB)
-F (..\App\SN3731_IO_IIC.c)(0x5BADDB58)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\App-I.\RTE\_GP-A012_NEWPCB_SN3731-ID:\ProgramFiles\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-ID:\ProgramFiles\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-ID:\ProgramFiles\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Device\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x6 -DUSE_HAL_DRIVER -DSTM32F030x6-o gp-a012\sn3731_io_iic.o --omf_browse gp-a012\sn3731_io_iic.crf --depend gp-a012\sn3731_io_iic.d)
+I (..\App\SN3731_IO_IIC.h)(0x5BBC4885)
+I (..\App\SN3731.h)(0x5BB85ABE)
+I (..\App\SN3731_array.h)(0x5BB86929)
+F (..\App\SN3731_IO_IIC.c)(0x5BBC223D)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\App-I.\RTE\_GP-A012_NEWPCB_SN3731-ID:\ProgramFiles\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-ID:\ProgramFiles\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-ID:\ProgramFiles\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Device\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x6 -DUSE_HAL_DRIVER -DSTM32F030x6-o gp-a012\sn3731_io_iic.o --omf_browse gp-a012\sn3731_io_iic.crf --depend gp-a012\sn3731_io_iic.d)
 I (..\App\app_main.h)(0x5BAD9B62)
 I (../Inc/main.h)(0x5B8FC75E)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h)(0x5B42D136)
@@ -1305,10 +1305,60 @@ I (..\App\music_fire.h )(0x5B99C873)
 I (..\App\s_small_fire.h)(0x5B9A3691)
 I (..\App\s_big_fire.h)(0x5B9A36B2)
 I (..\App\s_follow_wind_fire.h )(0x5B9A20E8)
-I (..\App\SN3731_IO_IIC.h)(0x5BADD904)
-I (..\App\SN3731.h)(0x5BADD9AC)
-I (..\App\SN3731_array.h)(0x5BADD8AB)
-F (../Src/main.c)(0x5B9A0072)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\App-I.\RTE\_GP-A012_NEWPCB_SN3731-ID:\ProgramFiles\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-ID:\ProgramFiles\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-ID:\ProgramFiles\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Device\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x6 -DUSE_HAL_DRIVER -DSTM32F030x6-o gp-a012\main.o --omf_browse gp-a012\main.crf --depend gp-a012\main.d)
+I (..\App\SN3731_IO_IIC.h)(0x5BBC4885)
+I (..\App\SN3731.h)(0x5BB85ABE)
+I (..\App\SN3731_array.h)(0x5BB86929)
+F (..\App\SN3731_Array.c)(0x5BB86954)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\App-I.\RTE\_GP-A012_NEWPCB_SN3731-ID:\ProgramFiles\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-ID:\ProgramFiles\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-ID:\ProgramFiles\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Device\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x6 -DUSE_HAL_DRIVER -DSTM32F030x6-o gp-a012\sn3731_array.o --omf_browse gp-a012\sn3731_array.crf --depend gp-a012\sn3731_array.d)
+I (..\App\app_main.h)(0x5BAD9B62)
+I (../Inc/main.h)(0x5B8FC75E)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h)(0x5B42D136)
+I (../Inc/stm32f0xx_hal_conf.h)(0x5B8FC75E)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h)(0x5B42D136)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x5B42D136)
+I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x5B42D132)
+I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f030x6.h)(0x5B42D132)
+I (../Drivers/CMSIS/Include/core_cm0.h)(0x5B42D136)
+I (D:\ProgramFiles\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
+I (../Drivers/CMSIS/Include/core_cmInstr.h)(0x5B42D136)
+I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x5B42D136)
+I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5B42D136)
+I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/system_stm32f0xx.h)(0x5B42D132)
+I (D:\ProgramFiles\Keil_v5\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc_ex.h)(0x5B42D136)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_gpio.h)(0x5B42D136)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_gpio_ex.h)(0x5B42D136)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_dma.h)(0x5B42D136)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_dma_ex.h)(0x5B42D136)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_cortex.h)(0x5B42D136)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_adc.h)(0x5B42D136)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_adc_ex.h)(0x5B42D136)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_flash.h)(0x5B42D136)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_flash_ex.h)(0x5B42D136)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_i2c.h)(0x5B42D136)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_i2c_ex.h)(0x5B42D136)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_pwr.h)(0x5B42D136)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_pwr_ex.h)(0x5B42D136)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart.h)(0x5B42D136)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart_ex.h)(0x5B42D136)
+I (D:\ProgramFiles\Keil_v5\ARM\ARMCC\include\string.h)(0x599ECD2C)
+I (..\App\h_adc.h)(0x5B9B1C2A)
+I (..\App\h_led.h)(0x5B99CA22)
+I (D:\ProgramFiles\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x599ECD2C)
+I (..\App\bt_mode.h)(0x5B91CF84)
+I (..\App\rgb.h)(0x5B9A3598)
+I (..\App\IO_IIC.h)(0x5BAC8579)
+I (..\App\SN3236.h)(0x5BAC90F6)
+I (..\App\Key.h)(0x5B91D494)
+I (..\App\big_fire.h)(0x5B9A3716)
+I (..\App\small_fire.h)(0x5B9A335A)
+I (..\App\music_fire.h )(0x5B99C873)
+I (..\App\s_small_fire.h)(0x5B9A3691)
+I (..\App\s_big_fire.h)(0x5B9A36B2)
+I (..\App\s_follow_wind_fire.h )(0x5B9A20E8)
+I (..\App\SN3731_IO_IIC.h)(0x5BBC4885)
+I (..\App\SN3731.h)(0x5BB85ABE)
+I (..\App\SN3731_array.h)(0x5BB86929)
+F (../Src/main.c)(0x5BBC489F)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\App-I.\RTE\_GP-A012_NEWPCB_SN3731-ID:\ProgramFiles\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-ID:\ProgramFiles\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-ID:\ProgramFiles\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Device\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x6 -DUSE_HAL_DRIVER -DSTM32F030x6-o gp-a012\main.o --omf_browse gp-a012\main.crf --depend gp-a012\main.d)
 I (../Inc/main.h)(0x5B8FC75E)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h)(0x5B42D136)
 I (../Inc/stm32f0xx_hal_conf.h)(0x5B8FC75E)
@@ -1355,10 +1405,10 @@ I (..\App\music_fire.h )(0x5B99C873)
 I (..\App\s_small_fire.h)(0x5B9A3691)
 I (..\App\s_big_fire.h)(0x5B9A36B2)
 I (..\App\s_follow_wind_fire.h )(0x5B9A20E8)
-I (..\App\SN3731_IO_IIC.h)(0x5BADD904)
-I (..\App\SN3731.h)(0x5BADD9AC)
-I (..\App\SN3731_array.h)(0x5BADD8AB)
-F (../Src/stm32f0xx_it.c)(0x5B98F05A)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\App-I.\RTE\_GP-A012_NEWPCB_SN3731-ID:\ProgramFiles\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-ID:\ProgramFiles\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-ID:\ProgramFiles\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Device\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x6 -DUSE_HAL_DRIVER -DSTM32F030x6-o gp-a012\stm32f0xx_it.o --omf_browse gp-a012\stm32f0xx_it.crf --depend gp-a012\stm32f0xx_it.d)
+I (..\App\SN3731_IO_IIC.h)(0x5BBC4885)
+I (..\App\SN3731.h)(0x5BB85ABE)
+I (..\App\SN3731_array.h)(0x5BB86929)
+F (../Src/stm32f0xx_it.c)(0x5BB886ED)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\App-I.\RTE\_GP-A012_NEWPCB_SN3731-ID:\ProgramFiles\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-ID:\ProgramFiles\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-ID:\ProgramFiles\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Device\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x6 -DUSE_HAL_DRIVER -DSTM32F030x6-o gp-a012\stm32f0xx_it.o --omf_browse gp-a012\stm32f0xx_it.crf --depend gp-a012\stm32f0xx_it.d)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h)(0x5B42D136)
 I (../Inc/stm32f0xx_hal_conf.h)(0x5B8FC75E)
 I (../Inc/main.h)(0x5B8FC75E)
@@ -1406,9 +1456,9 @@ I (..\App\music_fire.h )(0x5B99C873)
 I (..\App\s_small_fire.h)(0x5B9A3691)
 I (..\App\s_big_fire.h)(0x5B9A36B2)
 I (..\App\s_follow_wind_fire.h )(0x5B9A20E8)
-I (..\App\SN3731_IO_IIC.h)(0x5BADD904)
-I (..\App\SN3731.h)(0x5BADD9AC)
-I (..\App\SN3731_array.h)(0x5BADD8AB)
+I (..\App\SN3731_IO_IIC.h)(0x5BBC4885)
+I (..\App\SN3731.h)(0x5BB85ABE)
+I (..\App\SN3731_array.h)(0x5BB86929)
 F (../Src/stm32f0xx_hal_msp.c)(0x5B8FC75D)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\App-I.\RTE\_GP-A012_NEWPCB_SN3731-ID:\ProgramFiles\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-ID:\ProgramFiles\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-ID:\ProgramFiles\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Device\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x6 -DUSE_HAL_DRIVER -DSTM32F030x6-o gp-a012\stm32f0xx_hal_msp.o --omf_browse gp-a012\stm32f0xx_hal_msp.crf --depend gp-a012\stm32f0xx_hal_msp.d)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h)(0x5B42D136)
 I (../Inc/stm32f0xx_hal_conf.h)(0x5B8FC75E)

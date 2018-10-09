@@ -8,15 +8,15 @@
 /*ºê¶¨Òåmacro definition*/
 /************************/
 #ifdef STC_MCU
-	xdata unsigned char load_pwm[144];	//ÓÃÓÚ×°ÔØÒ»Ö¡¶¯»­µÄpwmÖµ
-	xdata unsigned char load_onoff[18];	//ÓÃÓÚ×°ÔØÁÁÃğÖµ
-	xdata unsigned char pwm_temp1[32];
-	xdata unsigned char pwm_temp2[32];
+xdata unsigned char load_pwm[144];	//ÓÃÓÚ×°ÔØÒ»Ö¡¶¯»­µÄpwmÖµ
+xdata unsigned char load_onoff[18];	//ÓÃÓÚ×°ÔØÁÁÃğÖµ
+xdata unsigned char pwm_temp1[32];
+xdata unsigned char pwm_temp2[32];
 #else
-	static unsigned char load_pwm[144];	//ÓÃÓÚ×°ÔØÒ»Ö¡¶¯»­µÄpwmÖµ
-	static unsigned char load_onoff[18];
-	static unsigned char pwm_temp1[32];
-	static unsigned char pwm_temp2[32];
+static unsigned char load_pwm[144];	//ÓÃÓÚ×°ÔØÒ»Ö¡¶¯»­µÄpwmÖµ
+static unsigned char load_onoff[18];
+static unsigned char pwm_temp1[32];
+static unsigned char pwm_temp2[32];
 #endif
 
 //×Ô´ø¶¯»­
@@ -35,7 +35,7 @@
 #define SN_REG_PWM_BASE    0x24
 
 #ifdef STC_MCU
-	extern unsigned char demo_NO;
+extern unsigned char demo_NO;
 #endif
 
 
@@ -49,6 +49,7 @@
 /****************************/
 unsigned char ack;	     //Ó¦´ğ±êÖ¾Î»
 unsigned char p_flag = 0;
+unsigned char front_4_flag;     //1Îª²¥·ÅÇ°4Õê±êÖ¾£¬0Îª²¥·Åºó4Õê±êÖ¾
 
 /*****************************/
 /*±äÁ¿¶¨Òåvariable definition*/
@@ -65,9 +66,9 @@ unsigned char  g_reg_08h = 0;
 unsigned char  g_reg_09h = 0;
 unsigned char  g_reg_0bh = 0;
 
-static unsigned char g_SN3731_IIC_ADDRESS = SN3731_IIC_ADDRESS_M;
 
-//static unsigned char g_SN3731_IIC_ADDRESS = SN3731_IIC_ADDRESS_M; //¸ÄÎªÁËºê¶¨Òå
+
+//static unsigned char g_SN3731_IIC_ADDRESS = g_SN3731_IIC_ADDRESS_M; //¸ÄÎªÁËºê¶¨Òå
 
 unsigned char g_Poweron_ontime = 1;
 
@@ -75,21 +76,23 @@ unsigned char g_dram[36];	/*ÓÃÓÚ¼ÇÂ¼0x00h-0x23hµÄ¼Ä´æÆ÷µÄÖµ£¬ÒòÎªÕâ36¸ö¼Ä´æÆ÷µÄÃ
 								ÒòÎªÕâ36¸ö¼Ä´æÆ÷µÄÃ¿¸öbit¿ØÖÆ¶ÔÓ¦Ò»¸öµÆµÄÁÁÃğºÍÉÁË¸µ±µ÷ÓÃÕë¶ÔÒ»¿ÅµÆµÄ×´Ì¬²Ù×÷Ê±£¬²»
 								ÄÜÓ°ÏìÍ¬Ò»×Ö½ÚµÄÆäËûbitËùÒÔ¾ÍÓĞ±ØÒª¼ÇÂ¼ÏÂÕâĞ©×Ö½ÚµÄ×´Ì¬ĞÅÏ¢ */
 
-//ÆäËû¶¯»­
-unsigned int  g_fireworks_NO;	//ÓÃÓÚ¼ÇÂ¼ÑÌ»¨¶¯»­²¥·Åµ½µÚ¼¸Ö¡
-unsigned int  g_fireworks_Temp;
-unsigned char g_lighting_NO;	//ÓÃÓÚ¼ÇÂ¼mode1¶¯»­²¥·Åµ½µÚ¼¸Ö¡
-unsigned char g_unlock_NO;		//ÓÃÓÚ¼ÇÂ¼mode2¶¯»­²¥·Åµ½µÚ¼¸Ö¡
-unsigned char g_water_NO;		//ÓÃÓÚ¼ÇÂ¼mode3¶¯»­²¥·Åµ½µÚ¼¸Ö¡
-unsigned char g_jingtaitu_NO;	//ÓÃÓÚ¼ÇÂ¼mode4¶¯»­²¥·Åµ½µÚ¼¸Ö¡
-unsigned char g_audio1_NO;		//ÓÃÓÚ¼ÇÂ¼mode4 picture ²¥·Åµ½µÚ¼¸Ö¡
-unsigned char g_audio2_NO;
-unsigned char g_audio3_NO;
-unsigned char g_CurrentMovie_NO;
-unsigned char g_rail;
-unsigned char g_times;
-unsigned char g_MovieEnd_Flag;
-unsigned char g_MovieRestart_Flag;
+								//ÆäËû¶¯»­
+uint8_t  g_fireworks_NO;	//ÓÃÓÚ¼ÇÂ¼ÑÌ»¨¶¯»­²¥·Åµ½µÚ¼¸Ö¡
+uint8_t  g_fireworks_Temp;
+uint8_t  g_lighting_NO;	//ÓÃÓÚ¼ÇÂ¼mode1¶¯»­²¥·Åµ½µÚ¼¸Ö¡
+uint8_t  g_unlock_NO;		//ÓÃÓÚ¼ÇÂ¼mode2¶¯»­²¥·Åµ½µÚ¼¸Ö¡
+uint8_t  g_water_NO;		//ÓÃÓÚ¼ÇÂ¼mode3¶¯»­²¥·Åµ½µÚ¼¸Ö¡
+uint8_t  g_jingtaitu_NO;	//ÓÃÓÚ¼ÇÂ¼mode4¶¯»­²¥·Åµ½µÚ¼¸Ö¡
+uint8_t  g_audio1_NO;		//ÓÃÓÚ¼ÇÂ¼mode4 picture ²¥·Åµ½µÚ¼¸Ö¡
+uint8_t  g_audio2_NO;
+uint8_t  g_audio3_NO;
+uint8_t  g_CurrentMovie_NO;
+uint8_t  g_rail;
+uint8_t  g_times;
+uint8_t  g_MovieEnd_Flag;
+uint8_t  g_MovieRestart_Flag;
+uint8_t  demo_NO; //SN3237Çı¶¯Ê¹ÓÃ
+uint8_t  timer_flag;
 
 /**************************/
 /*Êı×é¶¨Òåarray definition*/
@@ -117,9 +120,9 @@ unsigned char g_MovieRestart_Flag;
 *******************************************************************/
 void SN3731_Led_TurnOn_All(unsigned char i)
 {
-	SN3731_IIC_SelectSection(Reg_MainAddress, Reg_Section_Fram(i));
-	SN3731_IIC_WriteRegs(0x00, all_led_on, 18);
-	SN3731_IIC_WriteRegs(0x24, all_pwm_on, 144);
+	SN3731_IIC_SelectSection(Reg_MainAddress, Reg_Section_Fram(i));//Reg_MainAddress,0xFD(´ËµØÖ·ÎªÒ³Ãæ¿ØÖÆ¼Ä´æÆ÷)
+	SN3731_IIC_WriteRegs(0x01, (uint8_t *)all_led_on, 18);
+	SN3731_IIC_WriteRegs(0x24, (uint8_t *)all_pwm_on, 144);
 }
 
 /*******************************************************************
@@ -138,8 +141,8 @@ void SN3731_Led_TurnOn_All(unsigned char i)
 void SN3731_Led_TurnOff_All(unsigned char i)
 {
 	SN3731_IIC_SelectSection(Reg_MainAddress, Reg_Section_Fram(i));
-	SN3731_IIC_WriteRegs(0x00, all_led_off, 18);
-	SN3731_IIC_WriteRegs(0x24, all_pwm_off, 144);
+	SN3731_IIC_WriteRegs(0x00, (uint8_t *)all_led_off, 18);
+	SN3731_IIC_WriteRegs(0x24, (uint8_t *)all_pwm_off, 144);
 }
 
 /*******************************************************************
@@ -158,9 +161,9 @@ void SN3731_Led_TurnOff_All(unsigned char i)
 void SN3731_blink_TurnOn_All(unsigned char i)
 {
 	SN3731_IIC_SelectSection(Reg_MainAddress, Reg_Section_Fram(i));
-	SN3731_IIC_WriteRegs(0x12, all_blink_on, 18);
-	SN3731_IIC_WriteRegs(0x00, all_led_on, 18);
-	SN3731_IIC_WriteRegs(0x24, all_pwm_on, 144);
+	SN3731_IIC_WriteRegs(0x12, (uint8_t *)all_blink_on, 18);
+	SN3731_IIC_WriteRegs(0x00, (uint8_t *)all_led_on, 18);
+	SN3731_IIC_WriteRegs(0x24, (uint8_t *)all_pwm_on, 144);
 }
 
 /*******************************************************************
@@ -179,9 +182,9 @@ void SN3731_blink_TurnOn_All(unsigned char i)
 void SN3731_blink_TurnOff_All(unsigned char i)
 {
 	SN3731_IIC_SelectSection(Reg_MainAddress, Reg_Section_Fram(i));
-	SN3731_IIC_WriteRegs(0x12, all_blink_off, 18);
-	SN3731_IIC_WriteRegs(0x00, all_led_off, 18);
-	SN3731_IIC_WriteRegs(0x24, all_pwm_off, 144);
+	SN3731_IIC_WriteRegs(0x12, (uint8_t *)all_blink_off, 18);
+	SN3731_IIC_WriteRegs(0x00, (uint8_t *)all_led_off, 18);
+	SN3731_IIC_WriteRegs(0x24, (uint8_t *)all_pwm_off, 144);
 }
 
 /*******************************************************************
@@ -200,7 +203,7 @@ void SN3731_blink_TurnOff_All(unsigned char i)
 void SN3731_DeleteFrame_pwm(unsigned char i)
 {
 	SN3731_IIC_SelectSection(Reg_MainAddress, Reg_Section_Fram(i));
-	SN3731_IIC_WriteRegs(0x24, all_pwm_off, 144);
+	SN3731_IIC_WriteRegs(0x24, (uint8_t *)all_pwm_off, 144);
 }
 
 /*******************************************************************
@@ -219,7 +222,7 @@ void SN3731_DeleteFrame_pwm(unsigned char i)
 void SN3731_DeleteFrame_OnOff(unsigned char i)
 {
 	SN3731_IIC_SelectSection(Reg_MainAddress, Reg_Section_Fram(i));
-	SN3731_IIC_WriteRegs(0x00, all_led_off, 18);
+	SN3731_IIC_WriteRegs(0x00, (uint8_t *)all_led_off, 18);
 }
 
 /*******************************************************************
@@ -238,7 +241,7 @@ void SN3731_DeleteFrame_OnOff(unsigned char i)
 void SN3731_DeleteFrame_blink(unsigned char i)
 {
 	SN3731_IIC_SelectSection(Reg_MainAddress, Reg_Section_Fram(i));
-	SN3731_IIC_WriteRegs(0x12, all_blink_off, 18);
+	SN3731_IIC_WriteRegs(0x12, (uint8_t *)all_blink_off, 18);
 }
 
 /*******************************************************************
@@ -893,8 +896,6 @@ void SN3731_LedBlinkTurnOnOff_WrtieInMatrix(unsigned char row, unsigned char col
 		}
 
 	}
-
-
 }
 
 
@@ -974,9 +975,9 @@ void SN3731_Init(void)//Õâ¸öÊÇÔÚmainÖĞ±»µ÷ÓÃ
 																   #define Reg_MainAddress	 0xFD //¼Ä´æÆ÷Ö÷µØÖ·
 																   #define Reg_Section_Fram(i) ((i)-1) //i=1-8 */
 
-		SN3731_IIC_WriteRegs(0x00,*all_led_off,18);
-		SN3731_IIC_WriteRegs(0x12,*all_blink_off,18);
-		SN3731_IIC_WriteRegs(0x24,*all_pwm_off,144);
+		SN3731_IIC_WriteRegs(0x00, (uint8_t *)all_led_off, 18);
+		SN3731_IIC_WriteRegs(0x12, (uint8_t *)all_blink_off, 18);
+		SN3731_IIC_WriteRegs(0x24, (uint8_t *)all_pwm_off, 144);
 	}
 
 
@@ -984,6 +985,329 @@ void SN3731_Init(void)//Õâ¸öÊÇÔÚmainÖĞ±»µ÷ÓÃ
 	SN3731_IIC_Write_Reg(Reg_ShutDown, Normal_Operation_Mode);//½â³ıÈí¼ş¹Ø¶Ï
 	SN3731_IIC_SelectSection(Reg_MainAddress, Reg_Section_Fram(1));//Ö¸ÏòµÚÒ»Ö¡»­Ãæ
 
+}
+
+/*******************************************************************
+* º¯ÊıÔ­ĞÍ£ºvoid SN3731_Init2(void)
+* ÊäÈë²ÎÊı£º
+* Êä³ö²ÎÊı£º
+* º¯Êı¹¦ÄÜ£ºSN3731³õÊ¼»¯º¯Êı£¬
+* ´´½¨ÈÕÆÚ£º
+* ´´½¨ÈË£º
+* ĞŞ¸ÄÈÕÆÚ
+* ĞŞ¸ÄÈË£º
+* µÚN´ÎĞŞ¸Ä£º
+* ĞŞ¸ÄÔ­Òò£º
+* ±¸×¢£º
+*******************************************************************/
+void SN3731_Init2(void)
+{
+	g_reg_00h = 0;
+	g_reg_01h = 0;
+	g_reg_02h = 0;
+	g_reg_05h = 0;
+	g_reg_06h = 0;
+	g_reg_08h = 0;
+	g_reg_09h = 0;
+	g_reg_0bh = 0;
+
+	//g_fireworks_NO=0;
+	g_lighting_NO = 0;
+	g_unlock_NO = 0;
+	g_water_NO = 0;
+	g_jingtaitu_NO = 0;
+	g_audio1_NO = 0;
+	g_audio2_NO = 0;
+	g_audio3_NO = 0;
+	g_jingtaitu_NO = 0;
+
+	g_CurrentMovie_NO = 0;
+	g_rail = 0;
+	g_times = 0;
+	g_MovieEnd_Flag = 0;
+
+
+	/*****************************************************************************
+	*  ¼Ä´æÆ÷¿ò¼Ü¼òµ¥ÃèÊö:
+	*	SN3731×Ü¹²ÓĞ¾Å¸ö¼Ä´æÆ÷ÇøÓò,Ã¿¸öÇøÓòµÄµØÖ·¶¼ÊÇ £¨0x00-0xff£©£¬
+	*	Í¨¹ıÒ»¸öÖ÷µØÖ·À´Ñ°Ö·£¬¼´FDh, µ±FDhĞ´0BhÊ±£¬Ö¸Ïò¿ØÖÆ¼Ä´æÆ÷µØÖ·¿Õ¼ä£¬
+	*	ÕâÊ±£¨0x00-0xff£©¼Ä´æµØÖ·Ö»ÓĞ0x00-0x0cÓĞĞ§;
+	*	µ±FDhĞ´0-7Ê±,×ªÏò0-7Ö¡Í¼Æ¬µÄµØÖ·¿Õ¼ä£¬ÆäÖĞ0x00-0x11ÎªÁÁÃğ¼Ä´æÆ÷£¬
+	*	0x12-0x23ÎªÉÁË¸¼Ä´æÆ÷£¬0x24-0xB3Î»pwmÊı¾İ¼Ä´æÆ÷¡£
+	*****************************************************************************/
+	SN3731_IIC_Write_Reg(0xfd, 0x0b);/*FDhĞ´0BhÊ±£¬Ö¸Ïò¿ØÖÆ¼Ä´æÆ÷µØÖ·¿Õ¼ä*/
+	SN3731_IIC_Write_Reg(0x00, 0x00);/*ÒòÎªÕâ12¸ö[0x00-0x0c(Êµ¼Ê10¸ö,¿´ÊÖ²á¾ÍÖªµÀÎªÉ¶ÒªÆÁ±ÎÁË)]¼Ä
+								   ´æÆ÷Ğ´ÈëµÄÊı¾İ¶¼ÊÇ0x00£¬ËùÒÔÊÇ¿ØÖÆ¼Ä´æÆ÷ÇåÁã
+								   //¹¦ÄÜÌ«¶à£¬¿´ÊÖ²á*/
+
+	SN3731_IIC_Write_Reg(0x01, 0x00);//¹¦ÄÜÌ«¶à£¬¿´ÊÖ²á
+	//SN3731_IIC_Write_Reg(0x02,0x00);
+
+	SN3731_IIC_Write_Reg(0x03, 0x00);//¹¦ÄÜÌ«¶à£¬¿´ÊÖ²á
+	SN3731_IIC_Write_Reg(0x04, 0x00);//¹¦ÄÜÌ«¶à£¬¿´ÊÖ²á
+	SN3731_IIC_Write_Reg(0x05, 0x00);//¹¦ÄÜÌ«¶à£¬¿´ÊÖ²á
+	SN3731_IIC_Write_Reg(0x06, 0x00);//¹¦ÄÜÌ«¶à£¬¿´ÊÖ²á
+	SN3731_IIC_Write_Reg(0x07, 0x00);//¹¦ÄÜÌ«¶à£¬¿´ÊÖ²á
+	SN3731_IIC_Write_Reg(0x08, 0x00);//¹¦ÄÜÌ«¶à£¬¿´ÊÖ²á
+	SN3731_IIC_Write_Reg(0x09, 0x00);//¹¦ÄÜÌ«¶à£¬¿´ÊÖ²á
+	//SN3731_IIC_Write_Reg(0x0a,0x00);//¹¦ÄÜÌ«¶à£¬¿´ÊÖ²á
+	SN3731_IIC_Write_Reg(0x0b, 0x00);//¹¦ÄÜÌ«¶à£¬¿´ÊÖ²á
+	SN3731_IIC_Write_Reg(0x0c, 0x00);//¹¦ÄÜÌ«¶à£¬¿´ÊÖ²á
+}
+
+/*******************************************************************
+* º¯ÊıÔ­ĞÍ£ºvoid Load_Data_PWM(unsigned char movie_name)
+* ÊäÈë²ÎÊı£º
+* Êä³ö²ÎÊı£º
+* º¯Êı¹¦ÄÜ£º
+* ´´½¨ÈÕÆÚ£º
+* ´´½¨ÈË£º
+* ĞŞ¸ÄÈÕÆÚ
+* ĞŞ¸ÄÈË£º
+* µÚN´ÎĞŞ¸Ä£º
+* ĞŞ¸ÄÔ­Òò£º
+* ±¸×¢£º
+*******************************************************************/
+void Load_Data_PWM(unsigned char movie_name)
+{
+	unsigned char j, i;
+	//unsigned char p_flag=0;
+	if (movie_name == 1)
+	{
+		/*for(j=0;j<144;j++)
+		{
+		load_pwm[j]=0x00;
+		}
+
+		for(i=0;i<4;i++)
+		{
+		for(j=0;j<8;j++)
+		{
+		load_pwm[0x10+16*i+j]=0xff;//pwm_temp1[8*i+j];
+		}
+		}*/
+		for (j = 0; j < 144; j++)
+		{
+			load_pwm[143 - j] = fireworks_pwm[g_fireworks_NO][j];	//×°ÔØÒ»Ö¡¶¯»­µÄ»Ò¶ÈÖµµ½load_pwm[j]ÖĞ
+		}
+		for (i = 0; i < 4; i++)
+		{
+			for (j = 0; j < 8; j++)
+			{
+				pwm_temp1[8 * i + j] = load_pwm[0x18 + 16 * i + j]; //
+			}
+		}//È¡³ö
+		for (i = 0; i < 4; i++)
+		{
+			for (j = 0; j < 8; j++)
+			{
+				pwm_temp2[8 * i + j] = load_pwm[0x50 + 16 * i + j];
+			}
+		}//È¡³ö
+		for (i = 0; i < 4; i++)
+		{
+			for (j = 0; j < 8; j++)
+			{
+				load_pwm[0x18 + 16 * i + j] = pwm_temp2[8 * i + j];
+			}
+		}//ÌîÈë
+		for (i = 0; i < 4; i++)
+		{
+			for (j = 0; j < 8; j++)
+			{
+				load_pwm[0x50 + 16 * i + j] = pwm_temp1[8 * i + j];
+			}
+		}//ÌîÈë
+		 /*
+		 g_fireworks_Temp++;
+		 if(g_fireworks_Temp<145)
+		 g_fireworks_NO++;
+		 if(g_fireworks_Temp>=145)
+		 g_fireworks_NO--;
+
+		 if(g_fireworks_Temp==289)
+		 {
+		 g_fireworks_Temp=0;
+		 g_fireworks_NO=0;				//ÑÌ»¨¶¯»­ÓĞ220Ö¡£¬²¥·Å½áÊøÊ±ÖØĞÂ²¥·Å
+		 //while(1);
+		 //g_MovieEnd_Flag=1;
+		 } */
+		if (p_flag == 0)
+		{
+			g_fireworks_NO++;
+		}
+
+		if ((g_fireworks_NO == 145) && (p_flag == 0))
+		{
+			p_flag = 1;
+			//while(1);				
+			//g_MovieEnd_Flag=1;
+		}
+		if (p_flag == 1)
+		{
+			g_fireworks_NO--;
+			//while(1);	
+		}
+		if ((g_fireworks_NO == 0) && (p_flag == 1))
+		{
+			p_flag = 0;
+			//g_fireworks_NO=1;
+			//while(1);	
+		}
+	}
+	for (j = 0; j < 18; j++)
+	{
+		load_onoff[j] = 0Xff;		  //ÁÁÃğ¼Ä´æÆ÷È«¿ª
+	}
+
+	/*else if (movie_name == 2)
+	{
+		for (j = 0; j < 144; j++)
+		{
+			load_pwm[j] = lighting_pwm[g_lighting_NO][j];//×°ÔØÒ»Ö¡¶¯»­µÄ»Ò¶ÈÖµµ½load_pwm[j]ÖĞ
+		}
+		g_lighting_NO++;
+		if (g_lighting_NO == 20)
+		{
+			g_lighting_NO = 0;	      //ÉÁµç¶¯»­ÓĞ20Ö¡£¬²¥·Å½áÊøÊ±ÖØĞÂ²¥·Å
+			g_MovieEnd_Flag = 1;
+		}
+
+	}
+	else if (movie_name == 3)
+	{
+		for (j = 0; j < 144; j++)
+		{
+			load_pwm[j] = unlock_pwm[g_unlock_NO][j];//×°ÔØÒ»Ö¡¶¯»­µÄ»Ò¶ÈÖµµ½load_pwm[j]ÖĞ
+		}
+		g_unlock_NO++;				  //½âËø¶¯»­ÓĞ36Ö¡
+		if (g_unlock_NO == 36)
+		{
+			g_unlock_NO = 0;
+			g_MovieEnd_Flag = 1;
+		}
+
+	}
+	else if (movie_name == 4)
+	{
+		for (j = 0; j < 144; j++)
+		{
+			load_pwm[j] = water_pwm[g_water_NO][j];	//×°ÔØÒ»Ö¡¶¯»­µÄ»Ò¶ÈÖµµ½load_pwm[j]ÖĞ
+		}
+		g_water_NO++;
+		if (g_water_NO == 30)		  //Ë®µÎ¶¯»­ÓĞ30Ö¡
+		{
+			g_water_NO = 0;
+			g_MovieEnd_Flag = 1;
+		}
+
+	}
+	else if (movie_name == 5)
+	{
+		if (g_jingtaitu_NO == 8)
+		{						      //8·ù¾²Ì¬Í¼
+			g_jingtaitu_NO = 0;
+			g_MovieEnd_Flag = 1;
+
+		}
+
+		for (j = 0; j < 144; j++)
+		{
+			load_pwm[j] = jingtaitu_pwm[g_jingtaitu_NO][j];	//×°ÔØÒ»Ö¡¶¯»­µÄ»Ò¶ÈÖµµ½load_pwm[j]ÖĞ
+		}
+		g_jingtaitu_NO++;
+
+
+	}
+	else if (movie_name == 7)
+	{								  			 //8·ùÒôÆµÊı¾İ
+		for (j = 0; j < 144; j++)
+		{
+			load_pwm[j] = a2_pwm[g_audio2_NO][j];//×°ÔØÒ»Ö¡¶¯»­µÄ»Ò¶ÈÖµµ½load_pwm[j]ÖĞ
+		}
+		g_audio2_NO++;
+		if (g_audio2_NO == 8)
+		{
+			g_audio2_NO = 0;
+			g_MovieEnd_Flag = 1;
+		}
+
+	}
+	else if (movie_name == 8)
+	{
+		for (j = 0; j < 144; j++)
+		{
+			load_pwm[j] = a3_pwm[g_audio3_NO][j];//×°ÔØÒ»Ö¡¶¯»­µÄ»Ò¶ÈÖµµ½load_pwm[j]ÖĞ
+		}										 //72·ùÒôÆµÊı¾İ
+		g_audio3_NO++;							 //ÓÃSTC_MCUµÄ¶¨Ê±Æ÷À´¶¨Ê±Ë¢ĞÂSN3731µÄ8·ùÊı¾İ
+		if (g_audio3_NO == 72)
+		{
+			g_audio3_NO = 0;
+			g_MovieEnd_Flag = 1;
+		}
+
+	}
+
+
+
+
+	for (j = 0; j < 18; j++)
+	{
+		load_onoff[j] = 0Xff;					 //ÁÁÃğ¼Ä´æÆ÷È«¿ª
+	}
+
+	if (movie_name == 6)
+	{
+		for (j = 0; j < 144; j++)
+		{
+			load_pwm[j] = 0xff;
+		}
+
+		for (j = 0; j < 18; j++)
+		{
+			load_onoff[j] = a1_onoff[g_audio1_NO][j];//ÁÁÃğ¼Ä´æÆ÷È«¿ª
+		}
+		g_audio1_NO++;						   		 //8·ùÒôÆµÊı¾İ
+
+		if (g_audio1_NO == 8)
+		{
+			g_audio1_NO = 0;
+			g_MovieEnd_Flag = 1;
+		}
+
+
+	}*/
+
+	//ÔÚ´Ë´¦Ìí¼ÓÆäËûÄ£Ê½¶¯»­Êı¾İ×°ÔØ
+	//ÔÚ´Ë´¦Ìí¼ÓÆäËûÄ£Ê½¶¯»­Êı¾İ×°ÔØ
+	//ÔÚ´Ë´¦Ìí¼ÓÆäËûÄ£Ê½¶¯»­Êı¾İ×°ÔØ
+	/*if(movie_name==)*/
+}
+
+/*******************************************************************
+* º¯ÊıÔ­ĞÍ£ºvoid Load_Data_PWM(unsigned char movie_name)
+* ÊäÈë²ÎÊı£º
+* Êä³ö²ÎÊı£º
+* º¯Êı¹¦ÄÜ£º
+* ´´½¨ÈÕÆÚ£º
+* ´´½¨ÈË£º
+* ĞŞ¸ÄÈÕÆÚ
+* ĞŞ¸ÄÈË£º
+* µÚN´ÎĞŞ¸Ä£º
+* ĞŞ¸ÄÔ­Òò£º
+* ±¸×¢£º
+*******************************************************************/
+void SN3731_Write8Picture_Into8FrameReg(unsigned char static_picture_name)
+{
+	unsigned char i;
+	for (i = 1; i < 9; i++)
+	{
+		Load_Data_PWM(static_picture_name);
+		SN3731_SelectSection(Reg_MainAddress, Reg_Section_Fram(i));
+		SN3731_WriteRegs(0x00, load_onoff, 18);	//ËùÓĞµÄÁÁÃğ¼Ä´æÆ÷´ò¿ª
+		SN3731_WriteRegs(0x24, load_pwm, 144);	//Ğ´ÈëÑÌ»¨¶¯»­Êı¾İµÄpwmÖµ
+
+	}
 }
 
 /*******************************************************************
@@ -1019,8 +1343,8 @@ void SN3731_PingPang_BufferWrite(unsigned char Movie_Name, unsigned char delay_t
 					SN3731_Set_StartFrame_Picture(4);							//´ÓµÚ5Ö¡¿ªÊ¼²¥·Å
 					SN3731_Set_FrameNum(g_rail);								//4Ö¡(5-8)»­Ãæ²ÎÓëÑ­»·
 					SN3731_SelectSection(Reg_MainAddress, (g_rail + 4));		//Èç¹ûÎ²Êı²»ÎªÁã£¬Ôò°ÑÎ²ÊıµÄÏÂÒ»Ö¡¼Ä´æÆ÷Çå¿Õ
-					SN3731_WriteRegs(0x00, all_led_off, 18);	   				//ÒòÎªSN3731ÔÚ²¥·Å½áÊøÊ±£¬Í¼Æ¬ÊÇÍ£ÔÚ×îºóÒ»Ö¡µÄÏÂÒ»Ö¡
-					SN3731_WriteRegs(0x24, all_pwm_off, 144);					//¶øÈç¹û²»ÇåÁãµÄ»°£¬ºÜ¿ÉÄÜÔÚmovieµÄÄ©Î²ÓëÏÂÒ»¶¯»­ÏÎ½ÓÊ±»áÉÁË¸Ò»ÏÂ¡£
+					SN3731_WriteRegs(0x00, (uint8_t *)all_led_off, 18);	   		//ÒòÎªSN3731ÔÚ²¥·Å½áÊøÊ±£¬Í¼Æ¬ÊÇÍ£ÔÚ×îºóÒ»Ö¡µÄÏÂÒ»Ö¡
+					SN3731_WriteRegs(0x24, (uint8_t *)all_pwm_off, 144);		//¶øÈç¹û²»ÇåÁãµÄ»°£¬ºÜ¿ÉÄÜÔÚmovieµÄÄ©Î²ÓëÏÂÒ»¶¯»­ÏÎ½ÓÊ±»áÉÁË¸Ò»ÏÂ¡£
 				}
 				else//µ±Ç°¶¯»­µÄ×ÜÖ¡ÊıÎª4µÄÅ¼Êı±¶
 				{
@@ -1028,8 +1352,8 @@ void SN3731_PingPang_BufferWrite(unsigned char Movie_Name, unsigned char delay_t
 					SN3731_Set_StartFrame_Picture(0);							//´ÓµÚ1Ö¡¿ªÊ¼²¥·Å
 					SN3731_Set_FrameNum(g_rail);								//4Ö¡(1-4)»­Ãæ²ÎÓëÑ­»·
 					SN3731_SelectSection(Reg_MainAddress, g_rail);
-					SN3731_WriteRegs(0x00, all_led_off, 18);	   				//Èç¹ûÎ²Êı²»ÎªÁã£¬ÇÒµ±Ç°¶¯»­µÄ×ÜÖ¡ÊıÎª4µÄÅ¼Êı±¶ÔòÎªÊıÖ¡ÇåÁã
-					SN3731_WriteRegs(0x24, all_pwm_off, 144);
+					SN3731_WriteRegs(0x00, (uint8_t *)all_led_off, 18);	   		//Èç¹ûÎ²Êı²»ÎªÁã£¬ÇÒµ±Ç°¶¯»­µÄ×ÜÖ¡ÊıÎª4µÄÅ¼Êı±¶ÔòÎªÊıÖ¡ÇåÁã
+					SN3731_WriteRegs(0x24, (uint8_t *)all_pwm_off, 144);
 				}
 			}
 			else
@@ -1039,10 +1363,10 @@ void SN3731_PingPang_BufferWrite(unsigned char Movie_Name, unsigned char delay_t
 				{
 					SN3731_SelectSection(Reg_MainAddress, Reg_Section_CTRLReg);	//²¥·ÅÇ°4Ö¡¶¯»­
 					SN3731_Set_StartFrame_Picture(0);							//´ÓµÚ1Ö¡¿ªÊ¼²¥·Å
-					SN3731_Set_FrameNum(4);									   //4Ö¡»­Ãæ²ÎÓëÑ­»·
+					SN3731_Set_FrameNum(4);									    //4Ö¡»­Ãæ²ÎÓëÑ­»·
 					SN3731_SelectSection(Reg_MainAddress, 4);
-					SN3731_WriteRegs(0x00, all_led_off, 18);
-					SN3731_WriteRegs(0x24, all_pwm_off, 144);
+					SN3731_WriteRegs(0x00, (uint8_t *)all_led_off, 18);
+					SN3731_WriteRegs(0x24, (uint8_t *)all_pwm_off, 144);
 
 				}
 				else//µ±Ç°¶¯»­µÄ×ÜÖ¡ÊıÎª4µÄÅ¼Êı±¶
@@ -1051,8 +1375,8 @@ void SN3731_PingPang_BufferWrite(unsigned char Movie_Name, unsigned char delay_t
 					SN3731_Set_StartFrame_Picture(4);							//´ÓµÚ5Ö¡¿ªÊ¼²¥·Å
 					SN3731_Set_FrameNum(4);									    //4Ö¡(5-8)»­Ãæ²ÎÓëÑ­»·»·
 					SN3731_SelectSection(Reg_MainAddress, 0);					//ÒòÎª´ÓµÚ4Ö¡²¥·Å4Ö¡½áÊø£¬frameÍ£ÔÚframe0£¬ËùÒÔ°Ñframe0Çå0
-					SN3731_WriteRegs(0x00, all_led_off, 18);					//ÒòÎªSN3731ÔÚ²¥·Å½áÊøÊ±£¬Í¼Æ¬ÊÇÍ£ÔÚ×îºóÒ»Ö¡µÄÏÂÒ»Ö¡
-					SN3731_WriteRegs(0x24, all_pwm_off, 144);					//¶øÈç¹û²»ÇåÁãµÄ»°£¬ºÜ¿ÉÄÜÔÚmovieµÄÄ©Î²ÓëÏÂÒ»¶¯»­ÏÎ½ÓÊ±»áÉÁË¸Ò»ÏÂ¡£
+					SN3731_WriteRegs(0x00, (uint8_t *)all_led_off, 18);			//ÒòÎªSN3731ÔÚ²¥·Å½áÊøÊ±£¬Í¼Æ¬ÊÇÍ£ÔÚ×îºóÒ»Ö¡µÄÏÂÒ»Ö¡
+					SN3731_WriteRegs(0x24, (uint8_t *)all_pwm_off, 144);		//¶øÈç¹û²»ÇåÁãµÄ»°£¬ºÜ¿ÉÄÜÔÚmovieµÄÄ©Î²ÓëÏÂÒ»¶¯»­ÏÎ½ÓÊ±»áÉÁË¸Ò»ÏÂ¡£
 				}
 			}
 			g_MovieRestart_Flag = 1;
@@ -1076,7 +1400,7 @@ void SN3731_PingPang_BufferWrite(unsigned char Movie_Name, unsigned char delay_t
 			for (i = 0; i < 8; i++)		//¸Õ¿ªÊ¼²¥·ÅÊ±Ğ´¶¯»­µÄÇ°8Ö¡£¬
 			{
 				g_CurrentMovie_NO++;	//¼ÇÂ¼µ±Ç°²¥·Å¶¯»­²¥·Åµ½µÚ¼¸Ö¡
-				load_data_pwm(Movie_Name);				 //×°ÔØÑÌ»¨¶¯»­£¬ÓÉ´«½øÀ´µÄ²ÎÊı¾ö¶¨£¬²ÎÊıÓÉºê¶¨ÒåÈ·¶¨				
+				Load_Data_PWM(Movie_Name);				 //×°ÔØÑÌ»¨¶¯»­£¬ÓÉ´«½øÀ´µÄ²ÎÊı¾ö¶¨£¬²ÎÊıÓÉºê¶¨ÒåÈ·¶¨				
 				SN3731_SelectSection(Reg_MainAddress, i);//Ö¸ÏòµÚiÒ³¼Ä´æÆ÷¿Õ¼ä£¬i(0-7)ËùÒÔÊÇ»­Ãæ¼Ä´æÆ÷
 				SN3731_WriteRegs(0x00, load_onoff, 18);	 //ËùÓĞµÄÁÁÃğ¼Ä´æÆ÷´ò¿ª
 				SN3731_WriteRegs(0x24, load_pwm, 144);	 //Ğ´ÈëÑÌ»¨¶¯»­Êı¾İµÄpwmÖµ	
@@ -1105,7 +1429,7 @@ void SN3731_PingPang_BufferWrite(unsigned char Movie_Name, unsigned char delay_t
 			for (i = 4; i < 8; i++)		//ÕâÀïÎªÊ²Ã´Ğ´ºóËÄÖ¡¿´²»¶®
 			{											 //Ğ´ºó4Ö¡µÄ¶¯»­
 				g_CurrentMovie_NO++;					 //¼ÇÂ¼µ±Ç°²¥·Å¶¯»­²¥·Åµ½µÚ¼¸Ö¡
-				load_data_pwm(Movie_Name);				 //×°ÔØÑÌ»¨¶¯»­£¬²ÎÊıÓÉºê¶¨ÒåÈ·¶¨
+				Load_Data_PWM(Movie_Name);				 //×°ÔØÑÌ»¨¶¯»­£¬²ÎÊıÓÉºê¶¨ÒåÈ·¶¨
 				SN3731_SelectSection(Reg_MainAddress, i);//Ö¸ÏòµÚiÒ³¼Ä´æÆ÷¿Õ¼ä
 				SN3731_WriteRegs(0x00, load_onoff, 18);	 //ËùÓĞµÄÁÁÃğ¼Ä´æÆ÷´ò¿ª
 				SN3731_WriteRegs(0x24, load_pwm, 144);	 //Ğ´ÈëÑÌ»¨¶¯»­Êı¾İµÄpwmÖµ
@@ -1126,7 +1450,7 @@ void SN3731_PingPang_BufferWrite(unsigned char Movie_Name, unsigned char delay_t
 			for (i = 0; i < 4; i++)						 //Ğ´Ç°4Ö¡µÄ¶¯»­£¬ÎªÊ²Ã´£¬¿´²»¶®£¬²»ÊÇÓ¦¸ÃºóËÄÖ¡Âğ
 			{
 				g_CurrentMovie_NO++;					 //¼ÇÂ¼µ±Ç°²¥·Å¶¯»­²¥·Åµ½µÚ¼¸Ö¡
-				load_data_pwm(Movie_Name);				 //×°ÔØÑÌ»¨¶¯»­£¬					 
+				Load_Data_PWM(Movie_Name);				 //×°ÔØÑÌ»¨¶¯»­£¬					 
 				SN3731_SelectSection(Reg_MainAddress, i);//Ö¸ÏòµÚiÒ³¼Ä´æÆ÷¿Õ¼ä
 				SN3731_WriteRegs(0x00, load_onoff, 18);	 //ËùÓĞµÄÁÁÃğ¼Ä´æÆ÷´ò¿ª
 				SN3731_WriteRegs(0x24, load_pwm, 144);	 //Ğ´ÈëÑÌ»¨¶¯»­Êı¾İµÄpwmÖµ
@@ -1139,7 +1463,6 @@ void SN3731_PingPang_BufferWrite(unsigned char Movie_Name, unsigned char delay_t
 				}
 			}
 		}
-
 	}
 }
 
@@ -1158,7 +1481,7 @@ void SN3731_PingPang_BufferWrite(unsigned char Movie_Name, unsigned char delay_t
 	 ÀıÈç¿Í»§ÒªÔÚ×îÄ©Î²Ìí¼Ómode22¶¯»­£¬ÔòÊ×ÏÈÒªÏÈÔÚSN3731res.hÖĞ°Ñ
 	 mode22µÄ¶¯»­Êı¾İÌí¼Ó½øÈ¥£¬È»ºóÔÚ¸ÃÎÄ¼şÖĞ¶¨ÒåÒ»¸ö¼ÇÂ¼¸Ã
 	 ¶¯»­Ö¡ÊıµÄÈ«¾Ö±äÁ¿g_mode22_NO£¬Í¬Ê±¸øÕâ¸ö¶¯»­±àºÅÈç:
-	 #define g_MOVIE_mode22			0x16£¬È»ºóÔÚvoid load_data_pwm(unsigned char movie_name)
+	 #define g_MOVIE_mode22			0x16£¬È»ºóÔÚvoid Load_Data_PWM(unsigned char movie_name)
 	 º¯ÊıÖĞÌí¼Ó×°ÔØmode22¶¯»­Êı¾İ´úÂë£¬¾ßÌåÈçºÎÌí¼Ó¿É²ÎÕÕÒÑÓĞ
 	 ³ÌĞò£¬×îºóÔÚ±¾º¯ÊıµÄÄ©Î²Ìí¼ÓÒ»¸öÄ£Ê½£¬µ÷ÓÃ:
 	 SN3731_PingPang_BufferWrite(g_mode22_NO,g_MOVIE_mode22,0x04)¼´¿É
@@ -1170,11 +1493,11 @@ void SN3731_DEMO(unsigned char demo_index)
 	{
 		case 1:
 			#ifdef STC_MCU
-				TR0 = 0;//¹ØSTC_MCU ¶¨Ê±Æ÷
-				EX0 = 1;
+					TR0 = 0;//¹ØSTC_MCU ¶¨Ê±Æ÷
+					EX0 = 1;
 			#endif
-			SN3731_PingPang_BufferWrite(g_MOVIE_fireworks, 0x03);//play fireworks²¥·ÅÑÌ»ğ
-			break;
+				SN3731_PingPang_BufferWrite(g_MOVIE_fireworks, 0x03);//play fireworks²¥·ÅÑÌ»ğ
+				break;
 		/*case 2:
 			SN3731_PingPang_BufferWrite(g_MOVIE_lighting, 0x06);//play lighting²¥·ÅµÆ¹â
 			break;
@@ -1228,17 +1551,18 @@ void SN3731_DEMO(unsigned char demo_index)
 		case 8:
 			SN3731_SoftWareEn(1);
 			SN3731_Write8Picture_Into8FrameReg(g_MOVIE_audio3);
-			SN3731_AudioFrame_EN(1);//ÒôÀÖframeÊ¹ÄÜ	*/
+			SN3731_AudioFrame_EN(1);//ÒôÀÖframeÊ¹ÄÜ
 			#ifdef STC_MCU
 					TR0 = 1;//¿ªSTC_MCU ¶¨Ê±Æ÷
 			#endif
+			break;*/
+
+			/****************************************************
+			ÔÚ´Ë´¦Ìí¼ÓÄ£Ê½´úÂë(ÓÃ»§Ğ´µÄ£¬±ÈÈçÎÒµÄ´ó»ğ£¬Ğ¡»ğ...·ÅÔÚÕâÀï)
+			****************************************************/
+		case 9:
 			break;
-
-		/****************************************************
-		ÔÚ´Ë´¦Ìí¼ÓÄ£Ê½´úÂë(ÓÃ»§Ğ´µÄ£¬±ÈÈçÎÒµÄ´ó»ğ£¬Ğ¡»ğ...·ÅÔÚÕâÀï)
-		****************************************************/
-
-	}
+}
 
 	//if(mode!=1)break;		
 }

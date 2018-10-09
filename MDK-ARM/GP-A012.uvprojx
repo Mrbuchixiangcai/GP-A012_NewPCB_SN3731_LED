@@ -560,6 +560,11 @@
               <FileType>1</FileType>
               <FilePath>..\App\SN3731_IO_IIC.c</FilePath>
             </File>
+            <File>
+              <FileName>SN3731_Array.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\App\SN3731_Array.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

@@ -40,6 +40,7 @@
 #define  SN3731_SDA5_OUT()   {GPIOA->MODER &= (~((u32)0x03<<(5*2 )));GPIOA->MODER |= ((u32)01<<(5*2 ));}//GPIOA_Pin5设置为输出
 #define  SN3731_SDA6_IN()    {GPIOA->MODER &= (~((u32)0x03<<(6*2 )));GPIOA->MODER |= ((u32)00<<(6*2 ));}
 #define  SN3731_SDA6_OUT()   {GPIOA->MODER &= (~((u32)0x03<<(6*2 )));GPIOA->MODER |= ((u32)01<<(6*2 ));}
+#define  SN3731_SDA7_IN()    {GPIOA->MODER &= (~((u32)0x03<<(7*2 )));GPIOA->MODER |= ((u32)00<<(7*2 ));}
 
 #define  SN3731_IIC_DA5(a)	if(a)    					\
 								GPIOA->BSRR=GPIO_PIN_5; \
@@ -56,6 +57,7 @@
 
 #define  SN3731_READ_SDA5()   HAL_GPIO_ReadPin(GPIOA,GPIO_PIN_5)//读取PA5的电平状态
 #define  SN3731_READ_SDA6()   HAL_GPIO_ReadPin(GPIOA,GPIO_PIN_6)
+#define  SN3731_READ_INTB()   HAL_GPIO_ReadPin(GPIOA,GPIO_PIN_7)							
 
 
 #define Register_MainAddress	0xFD//寄存器主地址
@@ -196,6 +198,7 @@
 //i=0-63,当i=0，时间最大，其他情况下时间为i*30ms,最大为30ms*63=1.89s
 #define Config_Delay_BetweenFrame_Movie(i)	(i)//2.394s
 
+extern uint8_t g_SN3731_IIC_ADDRESS;
 
 /*************************/
 /*类型定义byte definition*/

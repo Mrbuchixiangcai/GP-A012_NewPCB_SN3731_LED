@@ -13,7 +13,7 @@
 /*宏定义macro definition*/
 /************************/
 #define	SN3731_DELAY	0x00		//此延时根据需要进行相应的调整
-//#define g_SN3731_IIC_ADDRESS  SN3731_IIC_ADDRESS_M  //器件地址,#define	SN3731_IIC_ADDRESS_M 0xe8
+//#define g_SN3731_IIC_ADDRESS  g_SN3731_IIC_ADDRESS_M  //器件地址,#define	g_SN3731_IIC_ADDRESS_M 0xe8
 
 /*************************/
 /*类型定义byte definition*/
@@ -148,10 +148,27 @@ void SN3731_DEMO(unsigned char demo_NO);
 /*外部调用_标志位定义flags definetion*/
 /************************************/
 extern unsigned char ack;	     //应答标志位
+extern unsigned char g_MovieRestart_Flag;
+
 /*************************************/
 /*外部调用_变量定义variable definition*/
 /*************************************/
-extern unsigned char g_SN3731_IIC_ADDRESS;
+extern uint8_t  g_fireworks_NO;	//用于记录烟花动画播放到第几帧
+extern uint8_t  g_fireworks_Temp;
+extern uint8_t  g_lighting_NO;	//用于记录mode1动画播放到第几帧
+extern uint8_t  g_unlock_NO;	//用于记录mode2动画播放到第几帧
+extern uint8_t  g_water_NO;		//用于记录mode3动画播放到第几帧
+extern uint8_t  g_jingtaitu_NO;	//用于记录mode4动画播放到第几帧
+extern uint8_t  g_audio1_NO;	//用于记录mode4 picture 播放到第几帧
+extern uint8_t  g_audio2_NO;
+extern uint8_t  g_audio3_NO;
+extern uint8_t  g_CurrentMovie_NO;
+extern uint8_t  g_rail;
+extern uint8_t  g_times;
+extern uint8_t  g_MovieEnd_Flag;
+extern uint8_t  demo_NO; //SN3237驱动使用
+extern uint8_t  timer_flag;
+
 /**********************************/
 /*外部调用_数组定义array definition*/
 /**********************************/
